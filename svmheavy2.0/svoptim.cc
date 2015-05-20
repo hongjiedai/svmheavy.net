@@ -1,4 +1,4 @@
-
+#include "stdafx.h"
 /*
  *  SVMheavy - Another SVM Library
  *  Copyright (C) 2005  Alistair Shilton

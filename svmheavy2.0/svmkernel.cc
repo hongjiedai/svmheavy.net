@@ -1,4 +1,4 @@
-
+#include "stdafx.h"
 /*
  *  SVMheavy - Another SVM Library
  *  Copyright (C) 2005  Alistair Shilton
@@ -32,7 +32,7 @@
 #include <iostream>
 #include <fstream>
 #include "nullstream.h"
-#include <gsl/gsl_errno.h>
+#include "gsl/err/gsl_errno.h"
 #include <time.h>
 #include "common/svdefs.h"
 #include "common/sparsevector.h"

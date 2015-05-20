@@ -1,4 +1,4 @@
-
+#include "stdafx.h"
 /*
  *  SVMheavy - Another SVM Library
  *  Copyright (C) 2005  Alistair Shilton
@@ -37,7 +37,7 @@
 #include <string.h>
 #include <math.h>
 #include <stdio.h>
-#include <gsl/gsl_math.h>
+#include "gsl/gsl_math.h"
 
 #include "common/svdefs.h"
 #include "common/vector.h"
