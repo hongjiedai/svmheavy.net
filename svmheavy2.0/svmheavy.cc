@@ -29,9 +29,10 @@
 
 #define TOP_LEVEL
 
+#include <windows.h>
 #include <iostream>
 #include <fstream>
-#include <unistd.h>
+#include <io.h>
 #include "nullstream.h"
 #include <gsl/err/gsl_errno.h>
 #include <time.h>
@@ -1057,7 +1058,7 @@ int main(int argc, char **argv)
                 {
                     while ( (*(machine.svc)).get_iter() )
                     {
-                        sleep((p.report_interval));
+                        Sleep((p.report_interval));
 
                         threadtime += (p.report_interval);
 
@@ -1102,7 +1103,7 @@ int main(int argc, char **argv)
                 {
                     while ( (*(machine.svr)).get_iter() )
                     {
-                        sleep((p.report_interval));
+                        Sleep((p.report_interval));
 
                         threadtime += (p.report_interval);
 
