@@ -1,3 +1,4 @@
+#include "stdafx.h"
 /* histogram/gsl-histogram.c
  * 
  * Copyright (C) 1996, 1997, 1998, 1999, 2000 Brian Gough
@@ -17,11 +18,12 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-#include <config.h>
+#include "config.h.in"
 #include <stdio.h>
 #include <stdlib.h>
-#include <gsl/gsl_histogram.h>
+#include "gsl/histogram/gsl_histogram.h"
 
+#if GSL_HISTOGRAM
 int
 main (int argc, char **argv)
 {
@@ -76,3 +78,4 @@ main (int argc, char **argv)
 
   return 0;
 }
+#endif

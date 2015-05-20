@@ -1,3 +1,4 @@
+#include "stdafx.h"
 /* randist/gsl-randist.c
  * 
  * Copyright (C) 1996, 1997, 1998, 1999, 2000 James Theiler, Brian Gough
@@ -17,19 +18,19 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-#include <config.h>
+#include "config.h.in"
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 #include <string.h>
 
-#include <gsl/gsl_randist.h>
-#include <gsl/gsl_rng.h>
-#include <gsl/gsl_test.h>
+#include "gsl/randist/gsl_randist.h"
+#include "gsl/rng/gsl_rng.h"
+#include "gsl/test/gsl_test.h"
 
 void error (const char * s);
 
-
+#if GSL_RANDIST
 int
 main (int argc, char *argv[])
 {
@@ -383,7 +384,7 @@ main (int argc, char *argv[])
 
   return 0 ;
 }
-
+#endif
 
 void
 error (const char * s)

@@ -19,7 +19,7 @@
 
 #ifndef __GSL_RANDIST_H__
 #define __GSL_RANDIST_H__
-#include <gsl/gsl_rng.h>
+#include "gsl/rng/gsl_rng.h"
 
 #undef __BEGIN_DECLS
 #undef __END_DECLS

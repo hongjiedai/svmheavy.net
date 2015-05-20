@@ -1,3 +1,4 @@
+#include "stdafx.h"
 /* version.c
  * 
  * Copyright (C) 1996, 1997, 1998, 1999, 2000 Brian Gough
@@ -17,8 +18,8 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-#include <config.h>
-#include <gsl_version.h>
+#include "config.h.in"
+#include "gsl_version.h"
 
 /* This file needs to use the top-level <gsl_version.h> due to the
    possibility of a VPATH-style build where the original source

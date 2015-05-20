@@ -586,6 +586,7 @@ long testwith_regressfile(std::ofstream &report_file, char *buffer, char *filena
 }
 #endif
 
+#if SVM_HEAVY
 int main(int argc, char **argv)
 {
     try
@@ -1401,7 +1402,7 @@ int main(int argc, char **argv)
     return 0;
 }
 END_OF_MAIN()
-
+#endif
 
 char *jump_stuff(char *buffer);
 

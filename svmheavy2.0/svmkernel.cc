@@ -26,7 +26,7 @@
 //             Melbourne University
 //
 
-
+#if SVM_KERNEL
 #define TOP_LEVEL
 
 #include <iostream>
@@ -82,3 +82,4 @@ int main()
 
     return 0;
 }
+#endif
