@@ -1,0 +1,132 @@
+The CLI version of SVMheavy is approximately compatible with SVMlight.
+However, as both contain features the other lacks, there are some important
+differences.  The following is a copy of the options summary contained in
+the CLI version itself:
+
+
+
+Usage:     SVMheavy {options} trainfile                                     
+trainfile: file containing training vectors.                                
+                                                                            
+Each line in the training/testing files contains a single sample with the   
+following general format (where values in {} are optional):                 
+                                                                            
+{>,=,<} y/z {tVAL} {TVAL} {eVAL} {EVAL} x                                   
+                                                                            
+Classification: - {>,=,<} is ignored.                                       
+                - y/z gives classification for point (0 for test unknown).  
+                - {tVAL} or {TVAL} sets the empirical risk scale.           
+                - {eVAL} or {EVAL} sets the distance to surface scale.      
+                - x is the training vector.                                 
+                                                                            
+Regression: - {>,=,<} defines if this is a lower bound, inequality or upper 
+              bound constraint.                                             
+            - y/z gives the target value for this point.                    
+            - {tVAL} sets the empirical risk scale for positive errors.     
+            - {TVAL} sets the empirical risk scale for negative errors.     
+            - {eVAL} sets the epsilon insensitivity for positive errors.    
+            - {EVAL} sets the epsilon insensitivity for negative errors.    
+            - x is the training vector.                                     
+                                                                            
+By default, the format for the x vector is:                                 
+                                                                            
+<feature1>:<value1> <feature2>:<value2> ... <featureN>:<valueN>             
+                                                                            
+In a testing/training file, other files may be included (a-la #include in C)
+using a line like:                                                          
+                                                                            
+# newfilename                                                               
+                                                                            
+Pipes: - Non-interactive output sent to standard error.                     
+       - Interactive output and help sent to standard out.                  
+       - All other output sent direct to files.                             
+                                                                            
+General options:                                                            
+         -?          - this screen.                                         
+         -v {0,1,2}  - verbosity level (default 2).                         
+                       0 = minimal (write log to trainfile.log).            
+                       1 = normal (include alpha, tau in trainfile.log).    
+                       2 = maximal (like normal, but also write svm details 
+                           to trainfile.svm).                               
+         -(          - select alternative x format, namely:                 
+                       x1 x2 ... xN                                         
+         -)          - enter interactive mode after this operation.         
+         -C int      - sets report interval, in seconds (default 2).        
+Learning options:                                                           
+         -z {c,r}    - select between classification 'c' and regression 'r'.
+                       (default classification).                            
+         -c float    - C: trade-off between training error and margin       
+                       (default 1).                                         
+         -c+ float   - C+: C scale factor for positive points (default 1).  
+         -c- float   - C-: C scale factor for negative points (default 1).  
+         -w float    - epsilon width of tube for regression, boundary       
+                       distance for classification (default 1 for           
+                       classification, 0.001 for regression).               
+         -w+ float   - epsilon scaling factor for +ve errors (default 1).   
+         -w- float   - epsilon scaling factor for -ve errors (default 1).   
+         -b {0,1}    - if 1, use biased hyperplane (i.e. x*w+b0) instead    
+                       of unbiased hyperplane (i.e. x*w0) (default 1        
+                       (biased)).                                           
+         -B float    - if the hyperplane is unbiased, this is used as a     
+                       fixed offset for training (i.e. x*w+B) (default 0).  
+         -R {0,1}    - use linear linear 0 or quadratic 1 primal empirical  
+                       risk (default 0 (linear)).                           
+         -T {0,1}    - if 1, use quadratic tube shrinking (regression SVM   
+                       only) (default 0 (no tube shrinking)).               
+         -! float    - nu value if quadratic tube shrinking used (0.5).     
+Preload options:                                                            
+         -@ svm_file - preload the SVM from a file.  In this case, the -(,  
+                       -z, -b, -B, -R, -T and all optimisation options will 
+                       be ignored.                                          
+Performance estimation options:                                             
+         -x {0,1}    - if 1, compute leave-one-out error (0).               
+         -$ testfile - if specified, validate svm using testfile.  In this  
+                       file, y = 0 indicates unknown classification.        
+Kernel options:                                                             
+         -t int      - type of kernel function (default 1):                 
+                       0 = linear.                                          
+                       1 = polynomial (s x*y+c)^d.                          
+                       2 = radial basis function exp(-(||x-y||^2)/gamma).   
+                       3 = sigmoid tanh(s x*y + c).                         
+         -K ker_file - loads the kernel from the file ker_file, overriding  
+                       the -t option.                                       
+         -d int      - parameter d in polynomial kernel (default 2).        
+         -g float    - parameter gamma in rbf kernel (default 1).           
+         -s float    - parameter s in sigmoid/poly kernel (default 1).      
+         -r float    - parameter c in sigmoid/poly kernel (default 1).      
+         -U i x      - for user defined kernels, set uci = x.               
+         -V i x      - for user defined kernels, set uvi = x.               
+Output options:                                                             
+         -L logfile  - string used to derive logfile and svm descript (if   
+                       saved).  These files will be this plus an extension  
+                       of .log or .svm.                                     
+Optimization options:                                                       
+         -%          - do not add training points to the SVM.  The trainfile
+                       argument is optional in this case.                   
+         -*          - do not optimise the SVM.                             
+         -e float    - accuracy required of g(x) in solution (defalt 0.001).
+         -# int      - terminate optimization after this many iterations,   
+                       even if solution not found (default 10000000).       
+         -m int      - size of kernel cache in MB (if dynamic, default 40)  
+         -W int      - expected training set size (for caching, default 500)
+         -A int      - length of buffer used in d2c optimisation method     
+                       (default 10).                                        
+         -F          - remove non-support vectors after optimisation.       
+         -M int      - optimisation method used (default 442).  The format  
+                       used is xyz, where x specifies the optimisation      
+                       algorithm and yz the caching options.  Specifically: 
+                       x = 1 for active set method, inverse factorisation.  
+                             (NB: the inverse factorisation is numerically  
+                                  unstable and hence should not be used).   
+                           2 for active set method, cholesky factorisation. 
+                           3 for Platt's SMO method.                        
+                           4 for Daniel's D2C method.                       
+                       y = 1 for no gradient caching.                       
+                           2 for nonbound support vector gradient caching.  
+                           3 for support vector gradient caching.           
+                           4 for full gradient caching.                     
+                       z = 1 for no kernel caching.                         
+                           2 for dynamic kernel caching.                    
+                           3 for nonbound support vector kernel caching.    
+                           4 for full kernel cache.                         
+                       NB: if x = 1 or 2, y must be 3 or 4.                 

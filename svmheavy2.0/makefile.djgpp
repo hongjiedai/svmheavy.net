@@ -1,0 +1,42 @@
+CFLAGS=-W -Wall -O2 -DNOTHREADS $(DEFINEA) $(DEFINEB)
+CCFLAGS=$(CFLAGS)
+CCC=gxx
+EXE=.exe
+
+OBJ=common/c_double.o common/outfilt.o common/search.o common/levicivita.o common/vector.o common/sparsevector.o common/matrix.o common/factor.o kernel.o kcache.o svdata.o svoptim.o svm_thread.o svm_pattern.o svm_regress.o
+LIB=libsvmheavy.a
+TEST=svmheavy.cc svmkernel.cc
+
+lib: $(OBJ)
+	cp *.o common
+	ar rcvs $(LIB) $(OBJ)
+
+.cc.o:
+	$(CCC) $(CCFLAGS) -c $<
+
+test:
+	$(CCC) $(CCFLAGS) -DUSEALLEGRO svmheavy.cc  -L. -lsvmheavy -lrime -lgsl -o svmheavy$(EXE) -lalleg
+	$(CCC) $(CCFLAGS) -DUSEALLEGRO svmkernel.cc -L. -lsvmheavy -lrime -lgsl -o svmkernel$(EXE) -lalleg
+
+clean:
+	rm *.o
+	cd common
+	rm *.o
+	cd ..
+
+svm_pattern.o: svm_pattern.h svm_pattern.cc svm_thread.h svflags.h kcache.h svdata.h kernel.h common/factor.h common/matrix.h common/vector.h common/sparsevector.h common/levicivita.h common/search.h common/c_double.h common/outfilt.h
+svm_regress.o: svm_regress.h svm_regress.cc svm_thread.h svflags.h kcache.h svdata.h kernel.h common/factor.h common/matrix.h common/vector.h common/sparsevector.h common/levicivita.h common/search.h common/c_double.h common/outfilt.h
+svm_thread.o: svm_thread.h svm_thread.cc
+svoptim.o: svoptim.h svoptim.cc svflags.h kcache.h svdata.h kernel.h common/factor.h common/matrix.h common/vector.h common/sparsevector.h common/levicivita.h common/search.h common/c_double.h common/outfilt.h
+svdata.o: svdata.h svdata.cc svflags.h kcache.h kernel.h common/factor.h common/matrix.h common/vector.h common/sparsevector.h common/levicivita.h common/search.h common/c_double.h common/outfilt.h
+kcache.o: svdata.h kcache.cc svflags.h common/vector.h common/levicivita.h common/search.h common/c_double.h common/outfilt.h
+kernel.o: kernel.h kernel.cc common/matrix.h common/vector.h common/sparsevector.h common/levicivita.h common/search.h common/c_double.h common/outfilt.h
+common/factor.o: common/factor.h common/factor.cc common/matrix.h common/vector.h common/sparsevector.h common/levicivita.h common/search.h common/c_double.h common/outfilt.h
+common/matrix.o: common/matrix.h common/matrix.cc common/vector.h common/sparsevector.h common/levicivita.h common/search.h common/c_double.h common/outfilt.h
+common/sparsevector.o: common/sparsevector.h common/sparsevector.cc common/vector.h common/levicivita.h common/search.h common/c_double.h common/outfilt.h
+common/vector.o: common/vector.h common/sparsevector.h common/vector.cc common/levicivita.h common/search.h common/c_double.h common/outfilt.h
+common/levicivita.o: common/levicivita.h common/levicivita.cc common/search.h common/c_double.h common/outfilt.h
+common/c_double.o: common/c_double.h common/c_double.cc common/search.h
+common/search.o: common/search.h common/search.cc
+common/outfilt.o: common/outfilt.h common/outfilt.cc common/c_double.h
+libsvmheavy.a: common/outfilt.o common/c_double.o common/search.o common/levicivita.o common/vector.o common/sparsevector.o common/matrix.o common/factor.o kernel.o svdata.o svoptim.o svm_pattern.o svm_regress.o svm_thread.o
