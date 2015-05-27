@@ -40,12 +40,12 @@
  *   Circular Functions in Terms of Real and Imaginary Parts", Formulas
  *   4.4.37, 4.4.38, 4.4.39
  */
-
-#include <config.h>
+#include "stdafx.h"
+#include <config.h.in>
 #include <math.h>
 #include <gsl/gsl_math.h>
-#include <gsl/gsl_complex.h>
-#include <gsl/gsl_complex_math.h>
+#include <gsl/complex/gsl_complex.h>
+#include <gsl/complex/gsl_complex_math.h>
 
 /**********************************************************************
  * Complex numbers

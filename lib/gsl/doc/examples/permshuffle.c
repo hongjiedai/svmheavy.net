@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <gsl/gsl_rng.h>
 #include <gsl/gsl_randist.h>
-#include <gsl/gsl_permutation.h>
+#include <gsl/permutation/gsl_permutation.h>
 
 int
 main (void) 

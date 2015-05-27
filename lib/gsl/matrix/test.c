@@ -17,7 +17,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-#include <config.h>
+#include <config.h.in>
 
 #if (!GSL_RANGE_CHECK) && HAVE_INLINE
 #undef GSL_RANGE_CHECK
@@ -28,9 +28,9 @@
 #include <stdio.h>
 #include <math.h>
 #include <gsl/gsl_math.h>
-#include <gsl/gsl_matrix.h>
-#include <gsl/gsl_test.h>
-#include <gsl/gsl_ieee_utils.h>
+#include <gsl/matrix/gsl_matrix.h>
+#include <gsl/test/gsl_test.h>
+#include <gsl/ieee-utils/gsl_ieee_utils.h>
 
 #define M 53
 #define N 107

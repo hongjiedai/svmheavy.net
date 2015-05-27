@@ -18,11 +18,11 @@
  */
 
 /* Author:  G. Jungman */
-
-#include <config.h>
+#include "stdafx.h"
+#include <config.h.in>
 #include <gsl/gsl_math.h>
-#include <gsl/gsl_errno.h>
-#include <gsl/gsl_sf_transport.h>
+#include <gsl/err/gsl_errno.h>
+#include <gsl/specfunc/gsl_sf_transport.h>
 
 #include "error.h"
 #include "check.h"

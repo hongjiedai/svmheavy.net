@@ -24,12 +24,12 @@
 /* Bader-Deuflhard implicit extrapolative stepper.
  * [Numer. Math., 41, 373 (1983)]
  */
-#include <config.h>
+#include <config.h.in>
 #include <stdlib.h>
 #include <string.h>
 #include <gsl/gsl_math.h>
-#include <gsl/gsl_errno.h>
-#include <gsl/gsl_linalg.h>
+#include <gsl/err/gsl_errno.h>
+#include <gsl/linalg/gsl_linalg.h>
 #include <gsl/gsl_odeiv.h>
 
 #include "odeiv_util.h"

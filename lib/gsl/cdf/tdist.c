@@ -36,11 +36,11 @@
  * 247. June 1982.
  */
 
-#include <config.h>
+#include <config.h.in>
 #include <gsl/gsl_cdf.h>
-#include <gsl/gsl_sf_gamma.h>
+#include <gsl/specfunc/gsl_sf_gamma.h>
 #include <gsl/gsl_math.h>
-#include <gsl/gsl_errno.h>
+#include <gsl/err/gsl_errno.h>
 
 #include "beta_inc.c"
 

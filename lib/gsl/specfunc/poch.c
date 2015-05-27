@@ -18,15 +18,15 @@
  */
 
 /* Author:  G. Jungman */
-
-#include <config.h>
+#include "stdafx.h"
+#include <config.h.in>
 #include <gsl/gsl_math.h>
-#include <gsl/gsl_errno.h>
-#include <gsl/gsl_sf_exp.h>
-#include <gsl/gsl_sf_log.h>
-#include <gsl/gsl_sf_pow_int.h>
-#include <gsl/gsl_sf_psi.h>
-#include <gsl/gsl_sf_gamma.h>
+#include <gsl/err/gsl_errno.h>
+#include <gsl/specfunc/gsl_sf_exp.h>
+#include <gsl/specfunc/gsl_sf_log.h>
+#include <gsl/specfunc/gsl_sf_pow_int.h>
+#include <gsl/specfunc/gsl_sf_psi.h>
+#include <gsl/specfunc/gsl_sf_gamma.h>
 
 #include "error.h"
 
@@ -160,7 +160,7 @@ pochrel_smallx(const double a, const double x, gsl_sf_result * result)
 
     if(bp == a) {
       result->val = dpoch1;
-      result->err = 2.0 * GSL_DBL_EPSILON * (fabs(incr) + 1.0) * fabs(result->val);
+	  result->err = 2.0 * GSL_DBL_EPSILON * (fabs((long double)incr) + 1.0) * fabs(result->val);
       return GSL_SUCCESS;
     }
     else {
@@ -175,7 +175,7 @@ pochrel_smallx(const double a, const double x, gsl_sf_result * result)
       double trig  = t1 - t2;
       result->val  = dpoch1 * (1.0 + x*trig) + trig;
       result->err  = (fabs(dpoch1*x) + 1.0) * GSL_DBL_EPSILON * (fabs(t1) + fabs(t2));
-      result->err += 2.0 * GSL_DBL_EPSILON * (fabs(incr) + 1.0) * fabs(result->val);
+	  result->err += 2.0 * GSL_DBL_EPSILON * (fabs((long double)incr) + 1.0) * fabs(result->val);
       return GSL_SUCCESS;
     }    
   }

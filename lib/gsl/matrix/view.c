@@ -1,6 +1,6 @@
-#include <config.h>
-#include <gsl/gsl_errno.h>
-#include <gsl/gsl_matrix.h>
+#include <config.h.in>
+#include <gsl/err/gsl_errno.h>
+#include <gsl/matrix/gsl_matrix.h>
 
 #include "view.h"
 

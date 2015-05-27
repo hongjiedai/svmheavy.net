@@ -19,9 +19,9 @@
 
 /* Author:  G. Jungman */
 
-#include <config.h>
-#include <gsl/gsl_test.h>
-#include <gsl/gsl_sf.h>
+#include <config.h.in>
+#include <gsl/test/gsl_test.h>
+#include <gsl/specfunc/gsl_sf.h>
 #include "test_sf.h"
 
 static double J[100];

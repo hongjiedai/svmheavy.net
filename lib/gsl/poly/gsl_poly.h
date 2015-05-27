@@ -33,6 +33,12 @@
 # define __END_DECLS /* empty */
 #endif
 
+/* C-style matrix elements */
+#define MAT(m,i,j,n) ((m)[(i)*(n) + (j)])
+
+/* Fortran-style matrix elements */
+#define FMAT(m,i,j,n) ((m)[((i)-1)*(n) + ((j)-1)])
+
 __BEGIN_DECLS
 
 

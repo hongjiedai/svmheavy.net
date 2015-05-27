@@ -17,10 +17,10 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-#include <config.h>
+#include <config.h.in>
 #include <stdio.h>
-#include <gsl/gsl_errno.h>
-#include <gsl/gsl_permutation.h>
+#include <gsl/err/gsl_errno.h>
+#include <gsl/permutation/gsl_permutation.h>
 
 #define IN_FORMAT "%lu"
 

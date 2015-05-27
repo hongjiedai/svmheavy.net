@@ -30,7 +30,7 @@
 
    FIXME: these have not been fully tested.
 */
-
+#include "stdafx.h"
 int
 TYPE (gsl_permute) (const size_t * p, ATOMIC * data, const size_t stride, const size_t n)
 {

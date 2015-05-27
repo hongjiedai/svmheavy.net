@@ -18,12 +18,12 @@
  */
 
 /* Author:  G. Jungman */
-
-#include <config.h>
+#include "stdafx.h"
+#include <config.h.in>
 #include <gsl/gsl_math.h>
-#include <gsl/gsl_errno.h>
-#include <gsl/gsl_sf_gamma.h>
-#include <gsl/gsl_sf_exp.h>
+#include <gsl/err/gsl_errno.h>
+#include <gsl/specfunc/gsl_sf_gamma.h>
+#include <gsl/specfunc/gsl_sf_exp.h>
 
 #include "error.h"
 
@@ -467,7 +467,7 @@ gsl_sf_exprel_n_e(const int N, const double x, gsl_sf_result * result)
       double lnpre_val;
       double lnpre_err;
       gsl_sf_lnfact_e(N, &lnf_N);    /* log(N!)       */
-      lg_N  = lnf_N.val - log(N);       /* log(Gamma(N)) */
+      lg_N  = lnf_N.val - log((long double)N);       /* log(Gamma(N)) */
       lnpre_val  = x + lnf_N.val - N*ln_x;
       lnpre_err  = GSL_DBL_EPSILON * (fabs(x) + fabs(lnf_N.val) + fabs(N*ln_x));
       lnpre_err += lnf_N.err;

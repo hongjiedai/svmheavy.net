@@ -4,7 +4,7 @@
  * See:
  *   Bratley, Fox, Niederreiter, ACM Trans. Model. Comp. Sim. 2, 195 (1992)
  */
-#include <config.h>
+#include <config.h.in>
 #include <gsl/gsl_qrng.h>
 
 

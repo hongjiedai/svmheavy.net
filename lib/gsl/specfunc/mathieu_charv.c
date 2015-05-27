@@ -18,15 +18,15 @@
  */
 
 /* Author:  L. Johnson */
-
-#include <config.h>
+#include "stdafx.h"
+#include <config.h.in>
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
 #include <gsl/gsl_math.h>
-#include <gsl/gsl_eigen.h>
-#include <gsl/gsl_errno.h>
-#include <gsl/gsl_sf_mathieu.h>
+#include <gsl/eigen/gsl_eigen.h>
+#include <gsl/err/gsl_errno.h>
+#include <gsl/specfunc/gsl_sf_mathieu.h>
 
 
 /* prototypes */

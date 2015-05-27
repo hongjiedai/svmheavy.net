@@ -20,15 +20,15 @@
 
 /* Author:  G. Jungman
  */
-#include <config.h>
+#include <config.h.in>
 #include <stdlib.h>
-#include <gsl/gsl_test.h>
+#include <gsl/test/gsl_test.h>
 #include <gsl/gsl_math.h>
-#include <gsl/gsl_ieee_utils.h>
-#include <gsl/gsl_permute_vector.h>
-#include <gsl/gsl_blas.h>
-#include <gsl/gsl_complex_math.h>
-#include <gsl/gsl_linalg.h>
+#include <gsl/ieee-utils/gsl_ieee_utils.h>
+#include <gsl/permutation/gsl_permute_vector.h>
+#include <gsl/blas/gsl_blas.h>
+#include <gsl/complex/gsl_complex_math.h>
+#include <gsl/linalg/gsl_linalg.h>
 
 #define TEST_SVD_4X4 1
 

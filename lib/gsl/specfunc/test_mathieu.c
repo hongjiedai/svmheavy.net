@@ -19,8 +19,8 @@
 
 /* Author:  L. Johnson */
 
-#include <gsl/gsl_test.h>
-#include <gsl/gsl_sf.h>
+#include <gsl/test/gsl_test.h>
+#include <gsl/specfunc/gsl_sf.h>
 #include "test_sf.h"
 
 #define NVAL 100

@@ -17,12 +17,12 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-#include <config.h>
+#include <config.h.in>
 #include <math.h>
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <gsl/gsl_sys.h>
+#include <gsl/sys/gsl_sys.h>
 #include <gsl/gsl_machine.h>
 
 #if HAVE_VPRINTF
@@ -33,7 +33,7 @@
 #endif
 #endif
 
-#include <gsl/gsl_test.h>
+#include <gsl/test/gsl_test.h>
 
 static unsigned int tests = 0;
 static unsigned int passed = 0;

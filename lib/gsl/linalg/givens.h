@@ -20,7 +20,11 @@
 /* Generate a Givens rotation (cos,sin) which takes v=(x,y) to (|v|,0) 
 
    From Golub and Van Loan, "Matrix Computations", Section 5.1.8 */
+#include "stdafx.h"
+#ifndef __GSL_GIVENS__
+#define __GSL_GIVENS__
 
+#include <gsl/gsl_math.h>
 inline static void
 create_givens (const double a, const double b, double *c, double *s)
 {
@@ -44,3 +48,5 @@ create_givens (const double a, const double b, double *c, double *s)
       *s = c1 * t;
     }
 }
+
+#endif 

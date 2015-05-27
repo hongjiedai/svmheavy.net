@@ -21,11 +21,11 @@
  * Author: J. Stover
  */
 
-#include <config.h>
+#include <config.h.in>
 #include <math.h>
 #include <gsl/gsl_cdf.h>
 #include <gsl/gsl_math.h>
-#include <gsl/gsl_sf_gamma.h>
+#include <gsl/specfunc/gsl_sf_gamma.h>
 
 double
 gsl_cdf_gamma_P (const double x, const double a, const double b)

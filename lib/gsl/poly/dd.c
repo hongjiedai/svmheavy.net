@@ -18,10 +18,10 @@
  */
 
 /* Modified for standalone use in polynomial directory, B.Gough 2001 */
-
-#include <config.h>
-#include <gsl/gsl_errno.h>
-#include <gsl/gsl_poly.h>
+#include "stdafx.h"
+#include <config.h.in>
+#include <gsl/err/gsl_errno.h>
+#include <gsl/poly/gsl_poly.h>
 
 int
 gsl_poly_dd_init (double dd[], const double xa[], const double ya[],

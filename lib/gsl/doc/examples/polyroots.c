@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <gsl/gsl_poly.h>
+#include <gsl/poly/gsl_poly.h>
 
 int
 main (void)

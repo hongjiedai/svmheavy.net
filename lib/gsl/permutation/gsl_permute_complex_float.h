@@ -23,7 +23,7 @@
 #include <stdlib.h>
 #include <gsl/err/gsl_errno.h>
 #include <gsl/complex/gsl_complex.h>
-#include <gsl/gsl_permutation.h>
+#include <gsl/permutation/gsl_permutation.h>
 
 #undef __BEGIN_DECLS
 #undef __END_DECLS

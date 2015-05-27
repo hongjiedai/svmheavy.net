@@ -17,11 +17,11 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-#include <config.h>
+#include <config.h.in>
 #include <gsl/gsl_math.h>
-#include <gsl/gsl_errno.h>
+#include <gsl/err/gsl_errno.h>
 #include <gsl/gsl_multifit_nlin.h>
-#include <gsl/gsl_blas.h>
+#include <gsl/blas/gsl_blas.h>
 
 int
 gsl_multifit_gradient (const gsl_matrix * J, const gsl_vector * f,

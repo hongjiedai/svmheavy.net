@@ -17,7 +17,9 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
-
+#include "stdafx.h"
+#include <gsl/matrix/gsl_matrix.h>
+#include <gsl/gsl_math.h>
 inline static void
 apply_givens_qr (size_t M, size_t N, gsl_matrix * Q, gsl_matrix * R,
                  size_t i, size_t j, double c, double s)

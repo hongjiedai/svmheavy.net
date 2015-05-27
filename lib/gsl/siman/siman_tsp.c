@@ -17,14 +17,14 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-#include <config.h>
+#include <config.h.in>
 #include <math.h>
 #include <string.h>
 #include <stdio.h>
 #include <gsl/gsl_math.h>
 #include <gsl/gsl_rng.h>
 #include <gsl/gsl_siman.h>
-#include <gsl/gsl_ieee_utils.h>
+#include <gsl/ieee-utils/gsl_ieee_utils.h>
 
 /* set up parameters for this simulated annealing run */
 

@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <gsl/gsl_block.h>
+#include <gsl/block/gsl_block.h>
 
 int
 main (void)

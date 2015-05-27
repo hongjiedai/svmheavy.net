@@ -18,11 +18,11 @@
  */
 
 /* Author:  L. Johnson */
-
-#include <config.h>
+#include "stdafx.h"
+#include <config.h.in>
 #include <stdlib.h>
 #include <math.h>
-#include <gsl/gsl_sf_mathieu.h>
+#include <gsl/specfunc/gsl_sf_mathieu.h>
 
 
 /*****************************************************************************

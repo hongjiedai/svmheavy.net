@@ -17,11 +17,11 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-#include <config.h>
+#include <config.h.in>
 #include <gsl/gsl_math.h>
-#include <gsl/gsl_errno.h>
-#include <gsl/gsl_permutation.h>
-#include <gsl/gsl_linalg.h>
+#include <gsl/err/gsl_errno.h>
+#include <gsl/permutation/gsl_permutation.h>
+#include <gsl/linalg/gsl_linalg.h>
 #include <gsl/gsl_multifit_nlin.h>
 
 /* Compute the covariance matrix

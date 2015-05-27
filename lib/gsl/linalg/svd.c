@@ -16,18 +16,18 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
-
-#include <config.h>
+#include "stdafx.h"
+#include <config.h.in>
 #include <stdlib.h>
 #include <string.h>
 #include <gsl/gsl_math.h>
-#include <gsl/gsl_vector.h>
-#include <gsl/gsl_matrix.h>
-#include <gsl/gsl_blas.h>
+#include <gsl/vector/gsl_vector.h>
+#include <gsl/matrix/gsl_matrix.h>
+#include <gsl/blas/gsl_blas.h>
 
-#include <gsl/gsl_linalg.h>
+#include <gsl/linalg/gsl_linalg.h>
 
-#include "givens.c"
+#include "givens.h"
 #include "svdstep.c"
 
 /* Factorise a general M x N matrix A into,

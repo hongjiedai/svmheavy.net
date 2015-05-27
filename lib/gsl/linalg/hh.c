@@ -18,13 +18,13 @@
  */
 
 /* Author:  G. Jungman */
-
-#include <config.h>
+#include "stdafx.h"
+#include <config.h.in>
 #include <stdlib.h>
 #include <gsl/gsl_math.h>
-#include <gsl/gsl_vector.h>
-#include <gsl/gsl_matrix.h>
-#include <gsl/gsl_linalg.h>
+#include <gsl/vector/gsl_vector.h>
+#include <gsl/matrix/gsl_matrix.h>
+#include <gsl/linalg/gsl_linalg.h>
 
 #define REAL double
 

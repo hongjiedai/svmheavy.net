@@ -17,7 +17,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-#include <config.h>
+#include <config.h.in>
 
 #include <stddef.h>
 #include <stdlib.h>
@@ -26,11 +26,11 @@
 #include <float.h>
 
 #include <gsl/gsl_math.h>
-#include <gsl/gsl_errno.h>
+#include <gsl/err/gsl_errno.h>
 #include <gsl/gsl_multifit_nlin.h>
-#include <gsl/gsl_blas.h>
-#include <gsl/gsl_linalg.h>
-#include <gsl/gsl_permutation.h>
+#include <gsl/blas/gsl_blas.h>
+#include <gsl/linalg/gsl_linalg.h>
+#include <gsl/permutation/gsl_permutation.h>
 
 
 typedef struct

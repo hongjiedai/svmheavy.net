@@ -17,10 +17,10 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307, USA.
  */
 
-#include <config.h>
+#include <config.h.in>
 #include <math.h>
 #include <gsl/gsl_math.h>
-#include <gsl/gsl_errno.h>
+#include <gsl/err/gsl_errno.h>
 #include <gsl/gsl_cdf.h>
 
 #include "error.h"

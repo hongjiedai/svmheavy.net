@@ -18,20 +18,14 @@
  */
 
 /* zsolve.c - finds the complex roots of  = 0 */
-
-#include <config.h>
+#include "stdafx.h"
+#include <config.h.in>
 #include <math.h>
 #include <stdlib.h>
 #include <gsl/gsl_math.h>
-#include <gsl/gsl_errno.h>
-#include <gsl/gsl_complex.h>
-#include <gsl/gsl_poly.h>
-
-/* C-style matrix elements */
-#define MAT(m,i,j,n) ((m)[(i)*(n) + (j)])
-
-/* Fortran-style matrix elements */
-#define FMAT(m,i,j,n) ((m)[((i)-1)*(n) + ((j)-1)])
+#include <gsl/err/gsl_errno.h>
+#include <gsl/complex/gsl_complex.h>
+#include <gsl/poly/gsl_poly.h>
 
 #include "companion.c"
 #include "balance.c"

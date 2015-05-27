@@ -31,9 +31,9 @@
    This implementation uses n+1 corner points in the simplex.
 */
 
-#include <config.h>
+#include <config.h.in>
 #include <stdlib.h>
-#include <gsl/gsl_blas.h>
+#include <gsl/blas/gsl_blas.h>
 #include <gsl/gsl_multimin.h>
 
 typedef struct

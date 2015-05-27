@@ -16,7 +16,8 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
-
+#include "stdafx.h"
+/*
 TYPE (gsl_block) *
 FUNCTION (gsl_block, alloc) (const size_t n)
 {
@@ -42,7 +43,7 @@ FUNCTION (gsl_block, alloc) (const size_t n)
     {
       free (b);         /* exception in constructor, avoid memory leak */
 
-      GSL_ERROR_VAL ("failed to allocate space for block data",
+/*      GSL_ERROR_VAL ("failed to allocate space for block data",
                         GSL_ENOMEM, 0);
     }
 
@@ -63,7 +64,7 @@ FUNCTION (gsl_block, calloc) (const size_t n)
 
   /* initialize block to zero */
 
-  for (i = 0; i < MULTIPLICITY * n; i++)
+/*  for (i = 0; i < MULTIPLICITY * n; i++)
     {
       b->data[i] = 0;
     }
@@ -77,3 +78,4 @@ FUNCTION (gsl_block, free) (TYPE (gsl_block) * b)
   free (b->data);
   free (b);
 }
+*/

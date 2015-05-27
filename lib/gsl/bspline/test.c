@@ -17,11 +17,11 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-#include <config.h>
-#include <gsl/gsl_test.h>
-#include <gsl/gsl_errno.h>
+#include <config.h.in>
+#include <gsl/test/gsl_test.h>
+#include <gsl/err/gsl_errno.h>
 #include <gsl/gsl_bspline.h>
-#include <gsl/gsl_ieee_utils.h>
+#include <gsl/ieee-utils/gsl_ieee_utils.h>
 
 void
 test_bspline (gsl_bspline_workspace * bw)

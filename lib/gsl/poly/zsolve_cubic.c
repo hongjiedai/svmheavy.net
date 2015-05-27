@@ -18,12 +18,12 @@
  */
 
 /* zsolve_cubic.c - finds the complex roots of x^3 + a x^2 + b x + c = 0 */
-
-#include <config.h>
+#include "stdafx.h"
+#include <config.h.in>
 #include <math.h>
 #include <gsl/gsl_math.h>
-#include <gsl/gsl_complex.h>
-#include <gsl/gsl_poly.h>
+#include <gsl/complex/gsl_complex.h>
+#include <gsl/poly/gsl_poly.h>
 
 #define SWAP(a,b) do { double tmp = b ; b = a ; a = tmp ; } while(0)
 

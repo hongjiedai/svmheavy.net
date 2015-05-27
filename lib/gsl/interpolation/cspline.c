@@ -19,11 +19,11 @@
 
 /* Author:  G. Jungman
  */
-#include <config.h>
+#include <config.h.in>
 #include <stdlib.h>
-#include <gsl/gsl_errno.h>
-#include <gsl/gsl_linalg.h>
-#include <gsl/gsl_vector.h>
+#include <gsl/err/gsl_errno.h>
+#include <gsl/linalg/gsl_linalg.h>
+#include <gsl/vector/gsl_vector.h>
 #include "integ_eval.h"
 #include <gsl/gsl_interp.h>
 

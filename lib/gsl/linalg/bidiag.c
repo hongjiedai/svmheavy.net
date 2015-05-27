@@ -61,15 +61,15 @@
  * Note: this description uses 1-based indices. The code below uses
  * 0-based indices 
  */
-
-#include <config.h>
+#include "stdafx.h"
+#include <config.h.in>
 #include <stdlib.h>
 #include <gsl/gsl_math.h>
-#include <gsl/gsl_vector.h>
-#include <gsl/gsl_matrix.h>
-#include <gsl/gsl_blas.h>
+#include <gsl/vector/gsl_vector.h>
+#include <gsl/matrix/gsl_matrix.h>
+#include <gsl/blas/gsl_blas.h>
 
-#include <gsl/gsl_linalg.h>
+#include <gsl/linalg/gsl_linalg.h>
 
 int 
 gsl_linalg_bidiag_decomp (gsl_matrix * A, gsl_vector * tau_U, gsl_vector * tau_V)  

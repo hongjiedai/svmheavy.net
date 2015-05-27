@@ -18,11 +18,11 @@
  */
 
 /* Author:  G. Jungman */
-
-#include <config.h>
+#include "stdafx.h"
+#include <config.h.in>
 #include <stdlib.h>
 #include <gsl/gsl_math.h>
-#include <gsl/gsl_linalg.h>
+#include <gsl/linalg/gsl_linalg.h>
 
 #define SWAP_SIZE_T(a, b)  do { size_t swap_tmp = a; a = b; b = swap_tmp; } while(0)
 

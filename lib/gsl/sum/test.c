@@ -19,14 +19,14 @@
 
 /* Author:  G. Jungman */
 
-#include <config.h>
+#include <config.h.in>
 #include <stdlib.h>
 #include <stdio.h>
 #include <gsl/gsl_math.h>
-#include <gsl/gsl_test.h>
+#include <gsl/test/gsl_test.h>
 #include <gsl/gsl_sum.h>
 
-#include <gsl/gsl_ieee_utils.h>
+#include <gsl/ieee-utils/gsl_ieee_utils.h>
 
 #define N 50
 

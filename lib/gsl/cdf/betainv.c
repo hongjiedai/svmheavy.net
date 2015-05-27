@@ -35,11 +35,11 @@
  * number 8, August 1968, pages 1264-1273.
  */
 
-#include <config.h>
+#include <config.h.in>
 #include <math.h>
 #include <gsl/gsl_math.h>
-#include <gsl/gsl_errno.h>
-#include <gsl/gsl_sf_gamma.h>
+#include <gsl/err/gsl_errno.h>
+#include <gsl/specfunc/gsl_sf_gamma.h>
 #include <gsl/gsl_cdf.h>
 #include <gsl/gsl_randist.h>
 

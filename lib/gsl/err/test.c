@@ -16,14 +16,15 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
-
-#include <config.h>
+#include "stdafx.h"
+/* ¼È®É¥ýµù¸Ñ
+#include <config.h.in>
 
 #include <stdio.h>
 #include <stdlib.h>
 
-#include <gsl/gsl_errno.h>
-#include <gsl/gsl_test.h>
+#include <gsl/err/gsl_errno.h>
+#include <gsl/test/gsl_test.h>
 
 #define CHECK(x) errors[n].number = x ; errors[n].name = #x ; n++ ;
 #define MAX_ERRS 64
@@ -114,3 +115,4 @@ main (void)
   exit (gsl_test_summary ());
 }
 
+*/

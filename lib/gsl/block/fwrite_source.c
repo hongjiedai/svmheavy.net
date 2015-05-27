@@ -16,7 +16,8 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
-
+#include "stdafx.h"
+/*
 int
 FUNCTION (gsl_block, fread) (FILE * stream, TYPE(gsl_block) * b)
 {
@@ -114,3 +115,4 @@ FUNCTION (gsl_block, raw_fwrite) (FILE * stream, const ATOMIC * data,
 
   return GSL_SUCCESS;
 }
+*/

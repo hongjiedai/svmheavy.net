@@ -1,4 +1,4 @@
-#include <config.h>
+#include <config.h.in>
 
 #if HAVE_GNUSPARC_IEEE_INTERFACE
 #include "fp-gnusparc.c"

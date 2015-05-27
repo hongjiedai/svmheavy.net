@@ -18,8 +18,8 @@
  */
 
 /* Author:  G. Jungman */
-
-#include <config.h>
+#include "stdafx.h"
+#include <config.h.in>
 #include <gsl/gsl_machine.h>
 #include <gsl/gsl_precision.h>
 

@@ -17,9 +17,9 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-#include <config.h>
-#include <gsl/gsl_ieee_utils.h>
-#include <gsl/gsl_errno.h>
+#include <config.h.in>
+#include <gsl/ieee-utils/gsl_ieee_utils.h>
+#include <gsl/err/gsl_errno.h>
 
 /* Here is the dirty part. Set up your 387 through the control word
  * (cw) register.

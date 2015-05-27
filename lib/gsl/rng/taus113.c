@@ -55,7 +55,7 @@
    the online version of the latter contains corrections to the print version.
 */
 
-#include <config.h>
+#include <config.h.in>
 #include <stdlib.h>
 #include <gsl/gsl_rng.h>
 

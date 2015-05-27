@@ -51,7 +51,7 @@
    */
 
 /* configuration headers */
-#include <config.h>
+#include <config.h.in>
 
 /* standard headers */
 #include <math.h>
@@ -59,7 +59,7 @@
 
 /* gsl headers */
 #include <gsl/gsl_math.h>
-#include <gsl/gsl_errno.h>
+#include <gsl/err/gsl_errno.h>
 #include <gsl/gsl_rng.h>
 #include <gsl/gsl_monte_vegas.h>
 

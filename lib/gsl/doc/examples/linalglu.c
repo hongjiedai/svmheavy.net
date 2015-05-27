@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <gsl/gsl_linalg.h>
+#include <gsl/linalg/gsl_linalg.h>
 
 int
 main (void)

@@ -34,16 +34,16 @@
  * tau as the first argument to gsl_linalg_householder_hm() rather
  * than tau itself. See the LAPACK function CLARFG for details of this
  * convention.  */
-
-#include <config.h>
+#include "stdafx.h"
+#include <config.h.in>
 #include <stdlib.h>
 #include <gsl/gsl_math.h>
-#include <gsl/gsl_vector.h>
-#include <gsl/gsl_matrix.h>
-#include <gsl/gsl_blas.h>
-#include <gsl/gsl_complex_math.h>
+#include <gsl/vector/gsl_vector.h>
+#include <gsl/matrix/gsl_matrix.h>
+#include <gsl/blas/gsl_blas.h>
+#include <gsl/complex/gsl_complex_math.h>
 
-#include <gsl/gsl_linalg.h>
+#include <gsl/linalg/gsl_linalg.h>
 
 gsl_complex
 gsl_linalg_complex_householder_transform (gsl_vector_complex * v)

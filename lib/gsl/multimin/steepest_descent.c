@@ -21,10 +21,10 @@
 
 /* Modified by Brian Gough to use single iteration structure */
 
-#include <config.h>
+#include <config.h.in>
 #include <gsl/gsl_multimin.h>
-#include <gsl/gsl_blas_types.h>
-#include <gsl/gsl_blas.h>
+#include <gsl/blas/gsl_blas_types.h>
+#include <gsl/blas/gsl_blas.h>
 
 typedef struct
 {

@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <gsl/gsl_vector.h>
+#include <gsl/vector/gsl_vector.h>
 
 int
 main (void)

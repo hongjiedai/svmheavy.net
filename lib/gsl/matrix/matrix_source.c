@@ -16,7 +16,8 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
-
+#include "stdafx.h"
+/*
 #ifndef HIDE_INLINE_STATIC
 BASE
 FUNCTION (gsl_matrix, get) (const TYPE (gsl_matrix) * m,
@@ -27,11 +28,11 @@ FUNCTION (gsl_matrix, get) (const TYPE (gsl_matrix) * m,
   if (gsl_check_range)
     {
       if (i >= m->size1)        /* size_t is unsigned, can't be negative */
-        {
+/*        {
           GSL_ERROR_VAL ("first index out of range", GSL_EINVAL, zero);
         }
       else if (j >= m->size2)   /* size_t is unsigned, can't be negative */
-        {
+ /*       {
           GSL_ERROR_VAL ("second index out of range", GSL_EINVAL, zero);
         }
     }
@@ -46,11 +47,11 @@ FUNCTION (gsl_matrix, set) (TYPE (gsl_matrix) * m,
   if (gsl_check_range)
     {
       if (i >= m->size1)        /* size_t is unsigned, can't be negative */
-        {
+        /*{
           GSL_ERROR_VOID ("first index out of range", GSL_EINVAL);
         }
       else if (j >= m->size2)   /* size_t is unsigned, can't be negative */
-        {
+/*        {
           GSL_ERROR_VOID ("second index out of range", GSL_EINVAL);
         }
     }
@@ -65,11 +66,11 @@ FUNCTION (gsl_matrix, ptr) (TYPE (gsl_matrix) * m,
   if (gsl_check_range)
     {
       if (i >= m->size1)        /* size_t is unsigned, can't be negative */
-        {
+/*        {
           GSL_ERROR_NULL ("first index out of range", GSL_EINVAL);
         }
       else if (j >= m->size2)   /* size_t is unsigned, can't be negative */
-        {
+/*        {
           GSL_ERROR_NULL ("second index out of range", GSL_EINVAL);
         }
     }
@@ -84,14 +85,15 @@ FUNCTION (gsl_matrix, const_ptr) (const TYPE (gsl_matrix) * m,
   if (gsl_check_range)
     {
       if (i >= m->size1)        /* size_t is unsigned, can't be negative */
-        {
+/*        {
           GSL_ERROR_NULL ("first index out of range", GSL_EINVAL);
         }
       else if (j >= m->size2)   /* size_t is unsigned, can't be negative */
-        {
+/*        {
           GSL_ERROR_NULL ("second index out of range", GSL_EINVAL);
         }
     }
   return (const BASE *) (m->data + MULTIPLICITY * (i * m->tda + j));
 }
 #endif
+*/

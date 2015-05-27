@@ -18,19 +18,19 @@
  */
 
 /* Author:  G. Jungman */
-
-#include <config.h>
+#include "stdafx.h"
+#include <config.h.in>
 #include <gsl/gsl_math.h>
-#include <gsl/gsl_errno.h>
-#include <gsl/gsl_poly.h>
-#include <gsl/gsl_sf_exp.h>
-#include <gsl/gsl_sf_trig.h>
-#include <gsl/gsl_sf_gamma.h>
-#include <gsl/gsl_sf_ellint.h>
-#include <gsl/gsl_sf_pow_int.h>
-#include <gsl/gsl_sf_bessel.h>
-#include <gsl/gsl_sf_hyperg.h>
-#include <gsl/gsl_sf_legendre.h>
+#include <gsl/err/gsl_errno.h>
+#include <gsl/poly/gsl_poly.h>
+#include <gsl/specfunc/gsl_sf_exp.h>
+#include <gsl/specfunc/gsl_sf_trig.h>
+#include <gsl/specfunc/gsl_sf_gamma.h>
+#include <gsl/specfunc/gsl_sf_ellint.h>
+#include <gsl/specfunc/gsl_sf_pow_int.h>
+#include <gsl/specfunc/gsl_sf_bessel.h>
+#include <gsl/specfunc/gsl_sf_hyperg.h>
+#include <gsl/specfunc/gsl_sf_legendre.h>
 
 #include "error.h"
 #include "legendre.h"
@@ -101,7 +101,7 @@ conicalP_negmu_xlt1_CF1(const double mu, const int ell, const double tau,
   }
 
   result->val = fn;
-  result->err = 4.0 * GSL_DBL_EPSILON * (sqrt(n) + 1.0) * fabs(fn);
+  result->err = 4.0 * GSL_DBL_EPSILON * (sqrt((long double)n) + 1.0) * fabs(fn);
 
   if(n >= maxiter)
     GSL_ERROR ("error", GSL_EMAXITER);
@@ -140,7 +140,7 @@ conicalP_negmu_xgt1_CF1(const double mu, const int ell, const double tau,
 
   result->val  = pre * sum;
   result->err  = fabs(pre * tk);
-  result->err += 2.0 * GSL_DBL_EPSILON * (sqrt(k) + 1.0) * fabs(pre*sum);
+  result->err += 2.0 * GSL_DBL_EPSILON * (sqrt((long double)k) + 1.0) * fabs(pre*sum);
 
   if(k >= maxk)
     GSL_ERROR ("error", GSL_EMAXITER);

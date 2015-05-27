@@ -1,5 +1,6 @@
+#include "stdafx.h"
 #include <gsl/gsl_math.h>
-#include <gsl/gsl_cblas.h>
+#include <gsl/cblas/gsl_cblas.h>
 #include "cblas.h"
 
 CBLAS_INDEX

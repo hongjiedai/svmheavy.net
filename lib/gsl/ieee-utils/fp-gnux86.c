@@ -19,8 +19,8 @@
 
 #include <stdio.h>
 #include <fpu_control.h>
-#include <gsl/gsl_errno.h>
-#include <gsl/gsl_ieee_utils.h>
+#include <gsl/err/gsl_errno.h>
+#include <gsl/ieee-utils/gsl_ieee_utils.h>
 
   /* Handle libc5, where _FPU_SETCW is not available, suggested by
      OKUJI Yoshinori <okuji@gnu.org> and Evgeny Stambulchik

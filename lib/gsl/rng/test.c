@@ -17,13 +17,13 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-#include <config.h>
+#include <config.h.in>
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
 #include <gsl/gsl_rng.h>
-#include <gsl/gsl_test.h>
-#include <gsl/gsl_ieee_utils.h>
+#include <gsl/test/gsl_test.h>
+#include <gsl/ieee-utils/gsl_ieee_utils.h>
 
 void rng_test (const gsl_rng_type * T, unsigned long int seed, unsigned int n,
                unsigned long int result);

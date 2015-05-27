@@ -18,15 +18,15 @@
  */
 
 /* Author:  G. Jungman */
-
-#include <config.h>
+#include "stdafx.h"
+#include <config.h.in>
 #include <gsl/gsl_math.h>
-#include <gsl/gsl_errno.h>
-#include <gsl/gsl_sf_exp.h>
-#include <gsl/gsl_sf_log.h>
-#include <gsl/gsl_sf_psi.h>
-#include <gsl/gsl_sf_trig.h>
-#include <gsl/gsl_sf_gamma.h>
+#include <gsl/err/gsl_errno.h>
+#include <gsl/specfunc/gsl_sf_exp.h>
+#include <gsl/specfunc/gsl_sf_log.h>
+#include <gsl/specfunc/gsl_sf_psi.h>
+#include <gsl/specfunc/gsl_sf_trig.h>
+#include <gsl/specfunc/gsl_sf_gamma.h>
 
 #include "error.h"
 #include "check.h"
@@ -1611,7 +1611,7 @@ int gsl_sf_choose_e(unsigned int n, unsigned int m, gsl_sf_result * result)
           prod *= tk;
         }
         result->val = prod;
-        result->err = 2.0 * GSL_DBL_EPSILON * prod * fabs(n-m);
+        result->err = 2.0 * GSL_DBL_EPSILON * prod * fabs((long double)(n-m));
         return GSL_SUCCESS;
       }
     else

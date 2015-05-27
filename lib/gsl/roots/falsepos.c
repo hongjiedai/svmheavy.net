@@ -31,7 +31,7 @@
 
 */
 
-#include <config.h>
+#include <config.h.in>
 
 #include <stddef.h>
 #include <stdlib.h>
@@ -40,7 +40,7 @@
 #include <float.h>
 
 #include <gsl/gsl_math.h>
-#include <gsl/gsl_errno.h>
+#include <gsl/err/gsl_errno.h>
 #include <gsl/gsl_roots.h>
 
 #include "roots.h"

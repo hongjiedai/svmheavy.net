@@ -17,11 +17,11 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-#include <config.h>
-#include <gsl/gsl_errno.h>
+#include <config.h.in>
+#include <gsl/err/gsl_errno.h>
 #include <gsl/gsl_multifit.h>
-#include <gsl/gsl_blas.h>
-#include <gsl/gsl_linalg.h>
+#include <gsl/blas/gsl_blas.h>
+#include <gsl/linalg/gsl_linalg.h>
 
 /* Fit
  *

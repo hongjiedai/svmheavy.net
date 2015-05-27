@@ -51,9 +51,9 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions);_MSC_VER</PreprocessorDefinitions>
       <PrecompiledHeader>Use</PrecompiledHeader>
-      <AdditionalIncludeDirectories>$(SolutionDir)gsl.net;$(SolutionDir)lib\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)gsl.net;$(SolutionDir)lib\;$(SolutionDir)lib\gsl\vector;$(SolutionDir)lib\gsl;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -79,6 +79,105 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\lib\gsl\acconfig.h" />
+    <ClInclude Include="..\lib\gsl\blas\gsl_blas.h" />
+    <ClInclude Include="..\lib\gsl\blas\gsl_blas_types.h" />
+    <ClInclude Include="..\lib\gsl\block\gsl_block.h" />
+    <ClInclude Include="..\lib\gsl\block\gsl_block_char.h" />
+    <ClInclude Include="..\lib\gsl\block\gsl_block_complex_double.h" />
+    <ClInclude Include="..\lib\gsl\block\gsl_block_complex_float.h" />
+    <ClInclude Include="..\lib\gsl\block\gsl_block_complex_long_double.h" />
+    <ClInclude Include="..\lib\gsl\block\gsl_block_double.h" />
+    <ClInclude Include="..\lib\gsl\block\gsl_block_float.h" />
+    <ClInclude Include="..\lib\gsl\block\gsl_block_int.h" />
+    <ClInclude Include="..\lib\gsl\block\gsl_block_long.h" />
+    <ClInclude Include="..\lib\gsl\block\gsl_block_long_double.h" />
+    <ClInclude Include="..\lib\gsl\block\gsl_block_short.h" />
+    <ClInclude Include="..\lib\gsl\block\gsl_block_uchar.h" />
+    <ClInclude Include="..\lib\gsl\block\gsl_block_uint.h" />
+    <ClInclude Include="..\lib\gsl\block\gsl_block_ulong.h" />
+    <ClInclude Include="..\lib\gsl\block\gsl_block_ushort.h" />
+    <ClInclude Include="..\lib\gsl\block\gsl_check_range.h" />
+    <ClInclude Include="..\lib\gsl\cblas\cblas.h" />
+    <ClInclude Include="..\lib\gsl\cblas\gsl_cblas.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_asum_c.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_asum_r.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_axpy_c.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_axpy_r.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_copy_c.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_copy_r.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_dot_c.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_dot_r.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_gbmv_c.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_gbmv_r.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_gemm_c.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_gemm_r.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_gemv_c.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_gemv_r.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_ger.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_gerc.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_geru.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_hbmv.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_hemm.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_hemv.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_her.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_her2.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_her2k.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_herk.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_hpmv.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_hpr.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_hpr2.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_iamax_c.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_iamax_r.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_nrm2_c.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_nrm2_r.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_rot.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_rotg.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_rotm.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_rotmg.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_sbmv.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_scal_c.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_scal_c_s.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_scal_r.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_spmv.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_spr.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_spr2.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_swap_c.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_swap_r.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_symm_c.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_symm_r.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_symv.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_syr.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_syr2.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_syr2k_c.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_syr2k_r.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_syrk_c.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_syrk_r.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_tbmv_c.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_tbmv_r.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_tbsv_c.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_tbsv_r.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_tpmv_c.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_tpmv_r.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_tpsv_c.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_tpsv_r.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_trmm_c.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_trmm_r.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_trmv_c.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_trmv_r.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_trsm_c.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_trsm_r.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_trsv_c.h" />
+    <ClInclude Include="..\lib\gsl\cblas\source_trsv_r.h" />
+    <ClInclude Include="..\lib\gsl\cblas\tests.h" />
+    <ClInclude Include="..\lib\gsl\complex\gsl_complex.h" />
+    <ClInclude Include="..\lib\gsl\complex\gsl_complex_math.h" />
+    <ClInclude Include="..\lib\gsl\complex\results.h" />
+    <ClInclude Include="..\lib\gsl\complex\results1.h" />
+    <ClInclude Include="..\lib\gsl\complex\results_real.h" />
+    <ClInclude Include="..\lib\gsl\eigen\gsl_eigen.h" />
+    <ClInclude Include="..\lib\gsl\eigen\schur.h" />
+    <ClInclude Include="..\lib\gsl\err\gsl_errno.h" />
+    <ClInclude Include="..\lib\gsl\err\gsl_message.h" />
     <ClInclude Include="..\lib\gsl\gsl_machine.h" />
     <ClInclude Include="..\lib\gsl\gsl_math.h" />
     <ClInclude Include="..\lib\gsl\gsl_mode.h" />
@@ -87,12 +186,628 @@
     <ClInclude Include="..\lib\gsl\gsl_precision.h" />
     <ClInclude Include="..\lib\gsl\gsl_types.h" />
     <ClInclude Include="..\lib\gsl\gsl_version.h" />
+    <ClInclude Include="..\lib\gsl\linalg\gsl_linalg.h" />
+    <ClInclude Include="..\lib\gsl\linalg\tridiag.h" />
+    <ClInclude Include="..\lib\gsl\matrix\gsl_matrix.h" />
+    <ClInclude Include="..\lib\gsl\matrix\gsl_matrix_char.h" />
+    <ClInclude Include="..\lib\gsl\matrix\gsl_matrix_complex_double.h" />
+    <ClInclude Include="..\lib\gsl\matrix\gsl_matrix_complex_float.h" />
+    <ClInclude Include="..\lib\gsl\matrix\gsl_matrix_complex_long_double.h" />
+    <ClInclude Include="..\lib\gsl\matrix\gsl_matrix_double.h" />
+    <ClInclude Include="..\lib\gsl\matrix\gsl_matrix_float.h" />
+    <ClInclude Include="..\lib\gsl\matrix\gsl_matrix_int.h" />
+    <ClInclude Include="..\lib\gsl\matrix\gsl_matrix_long.h" />
+    <ClInclude Include="..\lib\gsl\matrix\gsl_matrix_long_double.h" />
+    <ClInclude Include="..\lib\gsl\matrix\gsl_matrix_short.h" />
+    <ClInclude Include="..\lib\gsl\matrix\gsl_matrix_uchar.h" />
+    <ClInclude Include="..\lib\gsl\matrix\gsl_matrix_uint.h" />
+    <ClInclude Include="..\lib\gsl\matrix\gsl_matrix_ulong.h" />
+    <ClInclude Include="..\lib\gsl\matrix\gsl_matrix_ushort.h" />
+    <ClInclude Include="..\lib\gsl\matrix\view.h" />
+    <ClInclude Include="..\lib\gsl\permutation\gsl_permutation.h" />
+    <ClInclude Include="..\lib\gsl\permutation\gsl_permute.h" />
+    <ClInclude Include="..\lib\gsl\permutation\gsl_permute_char.h" />
+    <ClInclude Include="..\lib\gsl\permutation\gsl_permute_complex_double.h" />
+    <ClInclude Include="..\lib\gsl\permutation\gsl_permute_complex_float.h" />
+    <ClInclude Include="..\lib\gsl\permutation\gsl_permute_complex_long_double.h" />
+    <ClInclude Include="..\lib\gsl\permutation\gsl_permute_double.h" />
+    <ClInclude Include="..\lib\gsl\permutation\gsl_permute_float.h" />
+    <ClInclude Include="..\lib\gsl\permutation\gsl_permute_int.h" />
+    <ClInclude Include="..\lib\gsl\permutation\gsl_permute_long.h" />
+    <ClInclude Include="..\lib\gsl\permutation\gsl_permute_long_double.h" />
+    <ClInclude Include="..\lib\gsl\permutation\gsl_permute_short.h" />
+    <ClInclude Include="..\lib\gsl\permutation\gsl_permute_uchar.h" />
+    <ClInclude Include="..\lib\gsl\permutation\gsl_permute_uint.h" />
+    <ClInclude Include="..\lib\gsl\permutation\gsl_permute_ulong.h" />
+    <ClInclude Include="..\lib\gsl\permutation\gsl_permute_ushort.h" />
+    <ClInclude Include="..\lib\gsl\permutation\gsl_permute_vector.h" />
+    <ClInclude Include="..\lib\gsl\permutation\gsl_permute_vector_char.h" />
+    <ClInclude Include="..\lib\gsl\permutation\gsl_permute_vector_complex_double.h" />
+    <ClInclude Include="..\lib\gsl\permutation\gsl_permute_vector_complex_float.h" />
+    <ClInclude Include="..\lib\gsl\permutation\gsl_permute_vector_complex_long_double.h" />
+    <ClInclude Include="..\lib\gsl\permutation\gsl_permute_vector_double.h" />
+    <ClInclude Include="..\lib\gsl\permutation\gsl_permute_vector_float.h" />
+    <ClInclude Include="..\lib\gsl\permutation\gsl_permute_vector_int.h" />
+    <ClInclude Include="..\lib\gsl\permutation\gsl_permute_vector_long.h" />
+    <ClInclude Include="..\lib\gsl\permutation\gsl_permute_vector_long_double.h" />
+    <ClInclude Include="..\lib\gsl\permutation\gsl_permute_vector_short.h" />
+    <ClInclude Include="..\lib\gsl\permutation\gsl_permute_vector_uchar.h" />
+    <ClInclude Include="..\lib\gsl\permutation\gsl_permute_vector_uint.h" />
+    <ClInclude Include="..\lib\gsl\permutation\gsl_permute_vector_ulong.h" />
+    <ClInclude Include="..\lib\gsl\permutation\gsl_permute_vector_ushort.h" />
+    <ClInclude Include="..\lib\gsl\poly\gsl_poly.h" />
+    <ClInclude Include="..\lib\gsl\specfunc\bessel.h" />
+    <ClInclude Include="..\lib\gsl\specfunc\bessel_amp_phase.h" />
+    <ClInclude Include="..\lib\gsl\specfunc\bessel_olver.h" />
+    <ClInclude Include="..\lib\gsl\specfunc\bessel_temme.h" />
+    <ClInclude Include="..\lib\gsl\specfunc\chebyshev.h" />
+    <ClInclude Include="..\lib\gsl\specfunc\check.h" />
+    <ClInclude Include="..\lib\gsl\specfunc\error.h" />
+    <ClInclude Include="..\lib\gsl\specfunc\eval.h" />
+    <ClInclude Include="..\lib\gsl\specfunc\gsl_sf.h" />
+    <ClInclude Include="..\lib\gsl\specfunc\gsl_sf_airy.h" />
+    <ClInclude Include="..\lib\gsl\specfunc\gsl_sf_bessel.h" />
+    <ClInclude Include="..\lib\gsl\specfunc\gsl_sf_clausen.h" />
+    <ClInclude Include="..\lib\gsl\specfunc\gsl_sf_coulomb.h" />
+    <ClInclude Include="..\lib\gsl\specfunc\gsl_sf_coupling.h" />
+    <ClInclude Include="..\lib\gsl\specfunc\gsl_sf_dawson.h" />
+    <ClInclude Include="..\lib\gsl\specfunc\gsl_sf_debye.h" />
+    <ClInclude Include="..\lib\gsl\specfunc\gsl_sf_dilog.h" />
+    <ClInclude Include="..\lib\gsl\specfunc\gsl_sf_elementary.h" />
+    <ClInclude Include="..\lib\gsl\specfunc\gsl_sf_ellint.h" />
+    <ClInclude Include="..\lib\gsl\specfunc\gsl_sf_elljac.h" />
+    <ClInclude Include="..\lib\gsl\specfunc\gsl_sf_erf.h" />
+    <ClInclude Include="..\lib\gsl\specfunc\gsl_sf_exp.h" />
+    <ClInclude Include="..\lib\gsl\specfunc\gsl_sf_expint.h" />
+    <ClInclude Include="..\lib\gsl\specfunc\gsl_sf_fermi_dirac.h" />
+    <ClInclude Include="..\lib\gsl\specfunc\gsl_sf_gamma.h" />
+    <ClInclude Include="..\lib\gsl\specfunc\gsl_sf_gegenbauer.h" />
+    <ClInclude Include="..\lib\gsl\specfunc\gsl_sf_hyperg.h" />
+    <ClInclude Include="..\lib\gsl\specfunc\gsl_sf_laguerre.h" />
+    <ClInclude Include="..\lib\gsl\specfunc\gsl_sf_lambert.h" />
+    <ClInclude Include="..\lib\gsl\specfunc\gsl_sf_legendre.h" />
+    <ClInclude Include="..\lib\gsl\specfunc\gsl_sf_log.h" />
+    <ClInclude Include="..\lib\gsl\specfunc\gsl_sf_mathieu.h" />
+    <ClInclude Include="..\lib\gsl\specfunc\gsl_sf_pow_int.h" />
+    <ClInclude Include="..\lib\gsl\specfunc\gsl_sf_psi.h" />
+    <ClInclude Include="..\lib\gsl\specfunc\gsl_sf_result.h" />
+    <ClInclude Include="..\lib\gsl\specfunc\gsl_sf_synchrotron.h" />
+    <ClInclude Include="..\lib\gsl\specfunc\gsl_sf_transport.h" />
+    <ClInclude Include="..\lib\gsl\specfunc\gsl_sf_trig.h" />
+    <ClInclude Include="..\lib\gsl\specfunc\gsl_sf_zeta.h" />
+    <ClInclude Include="..\lib\gsl\specfunc\gsl_specfunc.h" />
+    <ClInclude Include="..\lib\gsl\specfunc\hyperg.h" />
+    <ClInclude Include="..\lib\gsl\specfunc\legendre.h" />
+    <ClInclude Include="..\lib\gsl\specfunc\recurse.h" />
+    <ClInclude Include="..\lib\gsl\specfunc\test_sf.h" />
+    <ClInclude Include="..\lib\gsl\sys\gsl_sys.h" />
     <ClInclude Include="..\lib\gsl\templates_off.h" />
     <ClInclude Include="..\lib\gsl\templates_on.h" />
+    <ClInclude Include="..\lib\gsl\vector\gsl_vector.h" />
+    <ClInclude Include="..\lib\gsl\vector\gsl_vector_char.h" />
+    <ClInclude Include="..\lib\gsl\vector\gsl_vector_complex.h" />
+    <ClInclude Include="..\lib\gsl\vector\gsl_vector_complex_double.h" />
+    <ClInclude Include="..\lib\gsl\vector\gsl_vector_complex_float.h" />
+    <ClInclude Include="..\lib\gsl\vector\gsl_vector_complex_long_double.h" />
+    <ClInclude Include="..\lib\gsl\vector\gsl_vector_double.h" />
+    <ClInclude Include="..\lib\gsl\vector\gsl_vector_float.h" />
+    <ClInclude Include="..\lib\gsl\vector\gsl_vector_int.h" />
+    <ClInclude Include="..\lib\gsl\vector\gsl_vector_long.h" />
+    <ClInclude Include="..\lib\gsl\vector\gsl_vector_long_double.h" />
+    <ClInclude Include="..\lib\gsl\vector\gsl_vector_short.h" />
+    <ClInclude Include="..\lib\gsl\vector\gsl_vector_uchar.h" />
+    <ClInclude Include="..\lib\gsl\vector\gsl_vector_uint.h" />
+    <ClInclude Include="..\lib\gsl\vector\gsl_vector_ulong.h" />
+    <ClInclude Include="..\lib\gsl\vector\gsl_vector_ushort.h" />
+    <ClInclude Include="..\lib\gsl\vector\view.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Stdafx.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\lib\gsl\blas\blas.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\block\block.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\block\block_source.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\block\vector_file.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\block\fprintf_source.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\block\fwrite_source.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\block\init.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\block\init_source.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\caxpy.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\ccopy.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\cdotc_sub.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\cdotu_sub.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\cgbmv.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\cgemm.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\cgemv.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\cgerc.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\cgeru.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\chbmv.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\chemm.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\chemv.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\cher.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\cher2.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\cher2k.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\cherk.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\chpmv.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\chpr.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\chpr2.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\cscal.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\csscal.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\cswap.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\csymm.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\csyr2k.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\csyrk.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\ctbmv.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\ctbsv.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\ctpmv.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\ctpsv.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\ctrmm.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\ctrmv.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\ctrsm.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\ctrsv.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\dasum.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\daxpy.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\dcopy.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\ddot.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\dgbmv.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\dgemm.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\dgemv.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\dger.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\dnrm2.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\drot.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\drotg.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\drotm.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\drotmg.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\dsbmv.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\dscal.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\dsdot.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\dspmv.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\dspr.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\dspr2.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\dswap.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\dsymm.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\dsymv.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\dsyr.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\dsyr2.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\dsyr2k.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\dsyrk.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\dtbmv.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\dtbsv.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\dtpmv.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\dtpsv.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\dtrmm.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\dtrmv.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\dtrsm.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\dtrsv.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\dzasum.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\dznrm2.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\hypot.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\icamax.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\idamax.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\isamax.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\izamax.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\sasum.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\saxpy.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\scasum.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\scnrm2.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\scopy.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\sdot.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\sdsdot.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\sgbmv.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\sgemm.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\sgemv.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\sger.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\snrm2.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\srot.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\srotg.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\srotm.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\srotmg.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\ssbmv.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\sscal.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\sspmv.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\sspr.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\sspr2.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\sswap.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\ssymm.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\ssymv.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\ssyr.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\ssyr2.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\ssyr2k.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\ssyrk.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\stbmv.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\stbsv.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\stpmv.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\stpsv.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\strmm.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\strmv.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\strsm.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\strsv.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\xerbla.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\zaxpy.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\zcopy.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\zdotc_sub.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\zdotu_sub.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\zdscal.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\zgbmv.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\zgemm.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\zgemv.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\zgerc.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\zgeru.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\zhbmv.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\zhemm.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\zhemv.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\zher.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\zher2.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\zher2k.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\zherk.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\zhpmv.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\zhpr.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\zhpr2.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\zscal.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\zswap.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\zsymm.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\zsyr2k.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\zsyrk.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\ztbmv.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\ztbsv.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\ztpmv.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\ztpsv.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\ztrmm.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\ztrmv.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\ztrsm.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\cblas\ztrsv.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\complex\math.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\eigen\francis.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\eigen\herm.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\eigen\hermv.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\eigen\jacobi.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\eigen\nonsymm.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\eigen\nonsymmv.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\eigen\qrstep.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\eigen\schur.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\eigen\sort.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\eigen\symm.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\eigen\symmv.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\err\error.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\err\message.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\err\stream.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\err\strerror.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
     <ClCompile Include="..\lib\gsl\gsl-histogram.c">
       <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
       <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
@@ -101,6 +816,516 @@
       <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
       <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
     </ClCompile>
+    <ClCompile Include="..\lib\gsl\linalg\apply_givens.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\linalg\balance.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\linalg\balancemat.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\linalg\bidiag.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\linalg\cholesky.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\linalg\exponential.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\linalg\givens.h">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\linalg\hermtd.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\linalg\hessenberg.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\linalg\hh.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\linalg\householder.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\linalg\householdercomplex.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\linalg\lq.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\linalg\lu.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\linalg\luc.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\linalg\multiply.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\linalg\ptlq.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\linalg\qr.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\linalg\qrpt.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\linalg\svd.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\linalg\svdstep.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\linalg\symmtd.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\linalg\tridiag.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\matrix\copy.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\matrix\copy_source.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\matrix\file.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\matrix\file_source.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\matrix\getset.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\matrix\getset_source.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\matrix\init.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\matrix\init_source.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\matrix\matrix.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\matrix\matrix_source.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\matrix\minmax.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\matrix\minmax_source.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\matrix\oper.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\matrix\prop.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\matrix\rowcol.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\matrix\submatrix.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\matrix\swap.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\matrix\swap_source.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\matrix\view.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\matrix\view_source.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\permutation\canonical.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\permutation\file.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\permutation\init.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\permutation\permutation.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\permutation\permute.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\poly\balance.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\poly\companion.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\poly\dd.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\poly\eval.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\poly\qr.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\poly\solve_cubic.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\poly\solve_quadratic.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\poly\zsolve.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\poly\zsolve_cubic.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\poly\zsolve_init.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\poly\zsolve_quadratic.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\airy.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\airy_der.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\airy_zero.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\atanint.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\bessel.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\bessel_amp_phase.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\bessel_i.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\bessel_I0.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\bessel_I1.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\bessel_In.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\bessel_Inu.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\bessel_j.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\bessel_J0.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\bessel_J1.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\bessel_Jn.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\bessel_Jnu.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\bessel_k.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\bessel_K0.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\bessel_K1.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\bessel_Kn.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\bessel_Knu.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\bessel_olver.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\bessel_sequence.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\bessel_temme.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\bessel_y.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\bessel_Y0.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\bessel_Y1.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\bessel_Yn.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\bessel_Ynu.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\bessel_zero.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\beta.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\beta_inc.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\cheb_eval.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\cheb_eval_mode.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\clausen.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\coulomb.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\coulomb_bound.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\coupling.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\dawson.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\debye.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\dilog.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\elementary.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\ellint.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\elljac.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\erfc.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\exp.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\expint.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\expint3.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\fermi_dirac.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\gamma.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\gamma_inc.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\gegenbauer.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\hyperg.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\hyperg_0F1.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\hyperg_1F1.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\hyperg_2F0.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\hyperg_2F1.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\hyperg_U.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\laguerre.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\lambert.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\legendre_con.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\legendre_H3d.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\legendre_poly.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\legendre_Qn.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\log.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\mathieu_angfunc.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\mathieu_charv.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\mathieu_coeff.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\mathieu_radfunc.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\mathieu_workspace.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\poch.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\pow_int.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\psi.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\result.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\shint.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\sinint.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\synchrotron.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\transport.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\trig.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\specfunc\zeta.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\sys\coerce.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\sys\expm1.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\sys\fcmp.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\sys\fdiv.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\sys\hypot.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\sys\infnan.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\sys\invhyp.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\sys\ldfrexp.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\sys\log1p.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\sys\minmax.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\sys\pow_int.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\sys\prec.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\vector\copy.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\vector\copy_source.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\vector\file.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\vector\file_source.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\vector\vector_init.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\vector\vector_init_source.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\vector\vector_minmax.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\vector\minmax_source.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\vector\oper.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\vector\vector_prop.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\vector\reim.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\vector\reim_source.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\vector\subvector.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\vector\swap.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\vector\swap_source.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\vector\vector.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\vector\vector_source.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\vector\view.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\lib\gsl\vector\view_source.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
     <ClCompile Include="..\lib\gsl\version.c">
       <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
       <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
@@ -108,6 +1333,7 @@
     <ClCompile Include="Stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -122,14 +1348,7 @@
   <ItemGroup>
     <None Include="..\lib\gsl\aclocal.m4" />
     <None Include="..\lib\gsl\AUTHORS" />
-    <None Include="..\lib\gsl\autogen.sh" />
     <None Include="..\lib\gsl\BUGS" />
-    <None Include="..\lib\gsl\ChangeLog" />
-    <None Include="..\lib\gsl\config.guess" />
-    <None Include="..\lib\gsl\config.h.in" />
-    <None Include="..\lib\gsl\config.sub" />
-    <None Include="..\lib\gsl\configure" />
-    <None Include="..\lib\gsl\configure.ac" />
     <None Include="..\lib\gsl\COPYING" />
     <None Include="..\lib\gsl\gsl-config.in" />
     <None Include="..\lib\gsl\gsl.m4" />
@@ -137,19 +1356,8 @@
     <None Include="..\lib\gsl\gsl.spec.in" />
     <None Include="..\lib\gsl\gsl_version.h.in" />
     <None Include="..\lib\gsl\INSTALL" />
-    <None Include="..\lib\gsl\install-sh" />
-    <None Include="..\lib\gsl\ltmain.sh" />
-    <None Include="..\lib\gsl\Makefile.am" />
-    <None Include="..\lib\gsl\Makefile.in" />
-    <None Include="..\lib\gsl\mdate-sh" />
-    <None Include="..\lib\gsl\missing" />
-    <None Include="..\lib\gsl\mkinstalldirs" />
     <None Include="..\lib\gsl\NEWS" />
     <None Include="..\lib\gsl\README" />
-    <None Include="..\lib\gsl\SUPPORT" />
-    <None Include="..\lib\gsl\test_gsl_histogram.sh" />
-    <None Include="..\lib\gsl\THANKS" />
-    <None Include="..\lib\gsl\TODO" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

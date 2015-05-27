@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <gsl/gsl_cblas.h>
+#include <gsl/cblas/gsl_cblas.h>
 
 int
 main (void)

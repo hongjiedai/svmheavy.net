@@ -18,11 +18,11 @@
  * Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
  */
 
-#include <config.h>
+#include <config.h.in>
 #include <math.h>
 #include <gsl/gsl_math.h>
 #include <gsl/gsl_cdf.h>
-#include <gsl/gsl_sf_gamma.h>
+#include <gsl/specfunc/gsl_sf_gamma.h>
 
 #include "error.h"
 
@@ -49,10 +49,10 @@
    chapter 6.
  */
 
-#include <config.h>
+#include <config.h.in>
 #include <math.h>
 #include <gsl/gsl_math.h>
-#include <gsl/gsl_errno.h>
+#include <gsl/err/gsl_errno.h>
 #include <gsl/gsl_cdf.h>
 
 double

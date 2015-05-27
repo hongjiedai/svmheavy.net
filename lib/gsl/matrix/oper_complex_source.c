@@ -16,7 +16,8 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
-
+#include "stdafx.h"
+/*
 int
 FUNCTION (gsl_matrix, add) (TYPE (gsl_matrix) * a,
                             const TYPE (gsl_matrix) * b)
@@ -234,3 +235,4 @@ int FUNCTION (gsl_matrix, add_diagonal) (TYPE (gsl_matrix) * a, const BASE x)
 
   return GSL_SUCCESS;
 }
+*/

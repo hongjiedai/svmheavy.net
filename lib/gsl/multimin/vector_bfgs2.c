@@ -25,9 +25,9 @@
 /* Thanks to Alan Irwin irwin@beluga.phys.uvic.ca. for suggesting this
    algorithm and providing sample fortran benchmarks */
 
-#include <config.h>
+#include <config.h.in>
 #include <gsl/gsl_multimin.h>
-#include <gsl/gsl_blas.h>
+#include <gsl/blas/gsl_blas.h>
 
 #include "linear_minimize.c"
 #include "linear_wrapper.c"

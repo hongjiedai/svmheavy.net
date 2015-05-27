@@ -22,7 +22,7 @@
 
 #define _GNU_SOURCE
 
-#include <config.h>
+#include <config.h.in>
 
 /* <unistd.h> should be included before any preprocessor test
    of _POSIX_VERSION.  */

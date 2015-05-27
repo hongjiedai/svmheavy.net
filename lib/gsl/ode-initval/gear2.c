@@ -21,11 +21,11 @@
 
 /* Author:  G. Jungman
  */
-#include <config.h>
+#include <config.h.in>
 #include <stdlib.h>
 #include <string.h>
 #include <gsl/gsl_math.h>
-#include <gsl/gsl_errno.h>
+#include <gsl/err/gsl_errno.h>
 #include "odeiv_util.h"
 #include <gsl/gsl_odeiv.h>
 

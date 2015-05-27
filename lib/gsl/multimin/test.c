@@ -19,12 +19,12 @@
 
 /* Modified by Tuomo Keskitalo to add Nelder Mead Simplex test suite */
 
-#include <config.h>
+#include <config.h.in>
 #include <stdlib.h>
-#include <gsl/gsl_test.h>
-#include <gsl/gsl_blas.h>
+#include <gsl/test/gsl_test.h>
+#include <gsl/blas/gsl_blas.h>
 #include <gsl/gsl_multimin.h>
-#include <gsl/gsl_ieee_utils.h>
+#include <gsl/ieee-utils/gsl_ieee_utils.h>
 
 #include "test_funcs.h"
 

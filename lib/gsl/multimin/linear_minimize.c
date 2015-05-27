@@ -1,6 +1,6 @@
 #include <gsl/gsl_math.h>
-#include <gsl/gsl_errno.h>
-#include <gsl/gsl_poly.h>
+#include <gsl/err/gsl_errno.h>
+#include <gsl/poly/gsl_poly.h>
 
 /* Find a minimum in x=[0,1] of the interpolating quadratic through
  * (0,f0) (1,f1) with derivative fp0 at x=0.  The interpolating

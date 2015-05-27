@@ -25,10 +25,10 @@
 /* Reference: Abramowitz & Stegun, section 25.5. Runge-Kutta 2nd (25.5.7)
    and 3rd (25.5.8) order methods */
 
-#include <config.h>
+#include <config.h.in>
 #include <stdlib.h>
 #include <string.h>
-#include <gsl/gsl_errno.h>
+#include <gsl/err/gsl_errno.h>
 #include <gsl/gsl_odeiv.h>
 
 #include "odeiv_util.h"

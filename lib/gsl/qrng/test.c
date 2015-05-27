@@ -1,11 +1,11 @@
 /* Author: G. Jungman
  */
-#include <config.h>
+#include <config.h.in>
 #include <stdlib.h>
-#include <gsl/gsl_ieee_utils.h>
+#include <gsl/ieee-utils/gsl_ieee_utils.h>
 
 #include <gsl/gsl_qrng.h>
-#include <gsl/gsl_test.h>
+#include <gsl/test/gsl_test.h>
 
 void test_sobol(void)
 {

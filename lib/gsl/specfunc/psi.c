@@ -18,15 +18,15 @@
  */
 
 /* Author: G. Jungman */
-
-#include <config.h>
+#include "stdafx.h"
+#include <config.h.in>
 #include <gsl/gsl_math.h>
-#include <gsl/gsl_errno.h>
-#include <gsl/gsl_sf_exp.h>
-#include <gsl/gsl_sf_gamma.h>
-#include <gsl/gsl_sf_zeta.h>
-#include <gsl/gsl_sf_psi.h>
-#include <gsl/gsl_complex_math.h>
+#include <gsl/err/gsl_errno.h>
+#include <gsl/specfunc/gsl_sf_exp.h>
+#include <gsl/specfunc/gsl_sf_gamma.h>
+#include <gsl/specfunc/gsl_sf_zeta.h>
+#include <gsl/specfunc/gsl_sf_psi.h>
+#include <gsl/complex/gsl_complex_math.h>
 
 #include <stdio.h>
 
@@ -590,8 +590,8 @@ int gsl_sf_psi_int_e(const int n, gsl_sf_result * result)
     const double c5 =  1.0/240.0;
     const double ni2 = (1.0/n)*(1.0/n);
     const double ser = ni2 * (c2 + ni2 * (c3 + ni2 * (c4 + ni2*c5)));
-    result->val  = log(n) - 0.5/n + ser;
-    result->err  = GSL_DBL_EPSILON * (fabs(log(n)) + fabs(0.5/n) + fabs(ser));
+	result->val = log((long double)n) - 0.5 / n + ser;
+	result->err = GSL_DBL_EPSILON * (fabs(log((long double)n)) + fabs(0.5 / n) + fabs(ser));
     result->err += GSL_DBL_EPSILON * fabs(result->val);
     return GSL_SUCCESS;
   }

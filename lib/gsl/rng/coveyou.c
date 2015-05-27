@@ -30,7 +30,7 @@
  * Carlo Perassi reorganized the code to use the rng framework of GSL.
  */
 
-#include <config.h>
+#include <config.h.in>
 #include <stdlib.h>
 #include <gsl/gsl_rng.h>
 

@@ -18,12 +18,12 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307, USA.
  */
 
-#include <config.h>
+#include <config.h.in>
 #include <math.h>
 #include <gsl/gsl_cdf.h>
-#include <gsl/gsl_sf_gamma.h>
+#include <gsl/specfunc/gsl_sf_gamma.h>
 #include <gsl/gsl_math.h>
-#include <gsl/gsl_errno.h>
+#include <gsl/err/gsl_errno.h>
 
 #include "error.h"
 #include "beta_inc.c"

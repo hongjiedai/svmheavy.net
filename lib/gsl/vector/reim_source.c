@@ -16,7 +16,8 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
-
+#include "stdafx.h"
+/*
 QUALIFIED_REAL_VIEW(_gsl_vector, view)
 FUNCTION(gsl_vector, real) (QUALIFIED_TYPE(gsl_vector) * v)
 {
@@ -27,6 +28,7 @@ FUNCTION(gsl_vector, real) (QUALIFIED_TYPE(gsl_vector) * v)
   s.stride = MULTIPLICITY * v->stride;
   s.block = 0;  /* FIXME: should be v->block, but cannot point to
                    block of different type */
+/*
   s.owner = 0;
 
   {
@@ -45,7 +47,7 @@ FUNCTION(gsl_vector, imag) (QUALIFIED_TYPE(gsl_vector) * v)
   s.size = v->size;
   s.stride = MULTIPLICITY * v->stride;
   s.block = 0;  /* FIXME: cannot point to block of different type */
-  s.owner = 0;
+/*  s.owner = 0;
 
   {
     QUALIFIED_REAL_VIEW(_gsl_vector,view) view = NULL_VECTOR_VIEW;
@@ -54,3 +56,4 @@ FUNCTION(gsl_vector, imag) (QUALIFIED_TYPE(gsl_vector) * v)
   }
 }
 
+*/

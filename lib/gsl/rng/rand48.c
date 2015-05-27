@@ -17,10 +17,10 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-#include <config.h>
+#include <config.h.in>
 #include <math.h>
 #include <stdlib.h>
-#include <gsl/gsl_sys.h>
+#include <gsl/sys/gsl_sys.h>
 #include <gsl/gsl_rng.h>
 
 /* This is the Unix rand48() generator. The generator returns the

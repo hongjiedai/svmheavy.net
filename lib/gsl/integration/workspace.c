@@ -17,10 +17,10 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-#include <config.h>
+#include <config.h.in>
 #include <stdlib.h>
 #include <gsl/gsl_integration.h>
-#include <gsl/gsl_errno.h>
+#include <gsl/err/gsl_errno.h>
 
 gsl_integration_workspace *
 gsl_integration_workspace_alloc (const size_t n) 

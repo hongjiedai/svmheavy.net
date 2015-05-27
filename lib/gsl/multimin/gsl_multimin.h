@@ -26,7 +26,7 @@
 #include <stdlib.h>
 #include <gsl/gsl_types.h>
 #include <gsl/gsl_math.h>
-#include <gsl/gsl_vector.h>
+#include <gsl/vector/gsl_vector.h>
 #include <gsl/matrix/gsl_matrix.h>
 #include <gsl/gsl_min.h>
 

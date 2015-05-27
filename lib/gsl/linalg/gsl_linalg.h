@@ -21,8 +21,8 @@
 #define __GSL_LINALG_H__
 
 #include <gsl/gsl_mode.h>
-#include <gsl/gsl_permutation.h>
-#include <gsl/gsl_vector.h>
+#include <gsl/permutation/gsl_permutation.h>
+#include <gsl/vector/gsl_vector.h>
 #include <gsl/matrix/gsl_matrix.h>
 
 #undef __BEGIN_DECLS

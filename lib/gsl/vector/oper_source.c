@@ -16,7 +16,8 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
-
+#include "stdafx.h"
+/*
 int 
 FUNCTION(gsl_vector, add) (TYPE(gsl_vector) * a, const TYPE(gsl_vector) * b)
 {
@@ -148,3 +149,4 @@ FUNCTION(gsl_vector, add_constant) (TYPE(gsl_vector) * a, const double x)
   
   return GSL_SUCCESS;
 }
+*/

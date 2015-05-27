@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include <gsl/gsl_errno.h>
-#include <gsl/gsl_matrix.h>
+#include <gsl/err/gsl_errno.h>
+#include <gsl/matrix/gsl_matrix.h>
 #include <gsl/gsl_odeiv.h>
 
 int

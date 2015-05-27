@@ -31,8 +31,8 @@
  * Jan. 2000
  *
  ***************************************************************/
-#include <config.h>
-#include <gsl/gsl_errno.h>
+#include <config.h.in>
+#include <gsl/err/gsl_errno.h>
 #include <gsl/gsl_histogram.h>
 
 double

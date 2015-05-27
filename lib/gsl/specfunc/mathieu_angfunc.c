@@ -18,13 +18,13 @@
  */
 
 /* Author:  L. Johnson */
-
-#include <config.h>
+#include "stdafx.h"
+#include <config.h.in>
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
 #include <gsl/gsl_math.h>
-#include <gsl/gsl_sf_mathieu.h>
+#include <gsl/specfunc/gsl_sf_mathieu.h>
 
 
 int gsl_sf_mathieu_ce(int order, double qq, double zz, gsl_sf_result *result)

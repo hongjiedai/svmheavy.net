@@ -19,13 +19,13 @@
  */
 
 /* Author: G. Jungman */
-
-#include <config.h>
+#include "stdafx.h"
+#include <config.h.in>
 #include <stdlib.h>
 #include <math.h>
-#include <gsl/gsl_errno.h>
+#include <gsl/err/gsl_errno.h>
 #include "tridiag.h"
-#include <gsl/gsl_linalg.h>
+#include <gsl/linalg/gsl_linalg.h>
 
 /* for description of method see [Engeln-Mullges + Uhlig, p. 92]
  *

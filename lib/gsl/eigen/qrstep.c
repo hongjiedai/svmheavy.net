@@ -1,6 +1,8 @@
 /* remove off-diagonal elements which are neglegible compared with the
    neighboring diagonal elements */
-
+#include "stdafx.h"
+#include <stdlib.h>
+#include <gsl/gsl_math.h>
 inline static void
 chop_small_elements (const size_t N, const double d[], double sd[])
 {

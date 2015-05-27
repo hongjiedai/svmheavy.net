@@ -17,14 +17,14 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-#include <config.h>
+#include <config.h.in>
 #include <stdlib.h>
 #include <stdio.h>
-#include <gsl/gsl_vector.h>
-#include <gsl/gsl_test.h>
+#include <gsl/vector/gsl_vector.h>
+#include <gsl/test/gsl_test.h>
 #include <gsl/gsl_multiroots.h>
 
-#include <gsl/gsl_ieee_utils.h>
+#include <gsl/ieee-utils/gsl_ieee_utils.h>
 
 #include "test_funcs.h"
 int test_fdf (const char * desc, gsl_multiroot_function_fdf * function, initpt_function initpt, double factor, const gsl_multiroot_fdfsolver_type * T);

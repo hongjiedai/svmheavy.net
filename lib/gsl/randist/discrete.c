@@ -140,11 +140,11 @@
 
  */
 
-#include <config.h>
+#include <config.h.in>
 #include <stdio.h>              /* used for NULL, also fprintf(stderr,...) */
 #include <stdlib.h>             /* used for malloc's */
 #include <math.h>
-#include <gsl/gsl_errno.h>
+#include <gsl/err/gsl_errno.h>
 #include <gsl/gsl_rng.h>
 #include <gsl/gsl_randist.h>
 #define DEBUG 0

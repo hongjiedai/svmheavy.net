@@ -32,9 +32,9 @@
  *
  ***************************************************************/
 
-#include <config.h>
+#include <config.h.in>
 #include <math.h>
-#include <gsl/gsl_errno.h>
+#include <gsl/err/gsl_errno.h>
 #include <gsl/gsl_histogram2d.h>
 
 /*

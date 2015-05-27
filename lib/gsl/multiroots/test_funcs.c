@@ -17,10 +17,10 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-#include <config.h>
+#include <config.h.in>
 #include <math.h>
-#include <gsl/gsl_vector.h>
-#include <gsl/gsl_matrix.h>
+#include <gsl/vector/gsl_vector.h>
+#include <gsl/matrix/gsl_matrix.h>
 #include <gsl/gsl_multiroots.h>
 
 #include "test_funcs.h"

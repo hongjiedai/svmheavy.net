@@ -20,15 +20,15 @@
 
 /* Author:  G. Jungman
  */
-#include <config.h>
+#include <config.h.in>
 #include <stddef.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
-#include <gsl/gsl_test.h>
-#include <gsl/gsl_errno.h>
+#include <gsl/test/gsl_test.h>
+#include <gsl/err/gsl_errno.h>
 #include <gsl/gsl_interp.h>
-#include <gsl/gsl_ieee_utils.h>
+#include <gsl/ieee-utils/gsl_ieee_utils.h>
 
 int
 test_bsearch(void)

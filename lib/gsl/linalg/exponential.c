@@ -22,13 +22,13 @@
 /* Calculate the matrix exponential, following
  * Moler + Van Loan, SIAM Rev. 20, 801 (1978).
  */
-
-#include <config.h>
+#include "stdafx.h"
+#include <config.h.in>
 #include <stdlib.h>
 #include <gsl/gsl_math.h>
 #include <gsl/gsl_mode.h>
-#include <gsl/gsl_errno.h>
-#include <gsl/gsl_blas.h>
+#include <gsl/err/gsl_errno.h>
+#include <gsl/blas/gsl_blas.h>
 
 #include "gsl_linalg.h"
 

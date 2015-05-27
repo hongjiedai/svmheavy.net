@@ -18,16 +18,16 @@
  */
 
 /* Author:  G. Jungman */
-
-#include <config.h>
+#include "stdafx.h"
+#include <config.h.in>
 #include <gsl/gsl_math.h>
-#include <gsl/gsl_errno.h>
-#include <gsl/gsl_sf_elementary.h>
-#include <gsl/gsl_sf_exp.h>
-#include <gsl/gsl_sf_bessel.h>
-#include <gsl/gsl_sf_gamma.h>
-#include <gsl/gsl_sf_laguerre.h>
-#include <gsl/gsl_sf_hyperg.h>
+#include <gsl/err/gsl_errno.h>
+#include <gsl/specfunc/gsl_sf_elementary.h>
+#include <gsl/specfunc/gsl_sf_exp.h>
+#include <gsl/specfunc/gsl_sf_bessel.h>
+#include <gsl/specfunc/gsl_sf_gamma.h>
+#include <gsl/specfunc/gsl_sf_laguerre.h>
+#include <gsl/specfunc/gsl_sf_hyperg.h>
 
 #include "error.h"
 #include "hyperg.h"
@@ -1000,7 +1000,7 @@ hyperg_1F1_ab_posint(const int a, const int b, const double x, gsl_sf_result * r
       Mn   = Mnm1;
     }
     result->val = Ma/Mn;
-    result->err = 2.0 * GSL_DBL_EPSILON * (fabs(a) + 1.0) * fabs(Ma/Mn);
+	result->err = 2.0 * GSL_DBL_EPSILON * (fabs((long double)a) + 1.0) * fabs((long double)Ma / Mn);
     return stat_CF1;
   }
   else if(b > a && b < 2*a + x && b > x) {
@@ -1031,7 +1031,7 @@ hyperg_1F1_ab_posint(const int a, const int b, const double x, gsl_sf_result * r
     stat_ex = gsl_sf_exp_e(x, &ex);  /* 1F1(b,b,x) */
     result->val  = ex.val * Ma/Mn;
     result->err  = ex.err * fabs(Ma/Mn);
-    result->err += 4.0 * GSL_DBL_EPSILON * (fabs(b-a)+1.0) * fabs(result->val);
+	result->err += 4.0 * GSL_DBL_EPSILON * (fabs((long double)(b - a)) + 1.0) * fabs(result->val);
     return GSL_ERROR_SELECT_2(stat_ex, stat_CF1);
   }
   else if(x >= 0.0) {
@@ -1054,7 +1054,7 @@ hyperg_1F1_ab_posint(const int a, const int b, const double x, gsl_sf_result * r
         }
         result->val  = Mn;
         result->err  = (x + 1.0) * GSL_DBL_EPSILON * fabs(Mn);
-        result->err *= fabs(a-b)+1.0;
+		result->err *= fabs((long double)(a - b)) + 1.0;
         return GSL_SUCCESS;
       }
       else {
@@ -1083,7 +1083,7 @@ hyperg_1F1_ab_posint(const int a, const int b, const double x, gsl_sf_result * r
         Mn   = Mnp1;
       }
       result->val  = Mn;
-      result->err  = fabs(Mn) * (1.0 + fabs(a)) * fabs(r_Mn.err / r_Mn.val);
+	  result->err = fabs(Mn) * (1.0 + fabs((long double)a)) * fabs(r_Mn.err / r_Mn.val);
       result->err += 2.0 * GSL_DBL_EPSILON * fabs(Mn);
       return GSL_SUCCESS;
     }
@@ -1110,7 +1110,7 @@ hyperg_1F1_ab_posint(const int a, const int b, const double x, gsl_sf_result * r
       }
       result->val  = Man;
       result->err  = (fabs(x) + 1.0) * GSL_DBL_EPSILON * fabs(Man);
-      result->err *= fabs(b-a)+1.0;
+	  result->err *= fabs((long double)(b - a)) + 1.0;
       return GSL_SUCCESS;
     }
     else {
@@ -1166,7 +1166,7 @@ hyperg_1F1_ab_posint(const int a, const int b, const double x, gsl_sf_result * r
 
       result->val  = Mn;
       result->err  = (fabs(x) + 1.0) * GSL_DBL_EPSILON *  fabs(Mn);
-      result->err *= fabs(b-a)+1.0;
+	  result->err *= fabs((long double)(b - a)) + 1.0;
       return GSL_SUCCESS;
     }
   }
@@ -1201,7 +1201,7 @@ hyperg_1F1_a_negint_poly(const int a, const double b, const double x, gsl_sf_res
       }
     }
     result->val = poly;
-    result->err = 2.0 * (sqrt(N) + 1.0) * GSL_DBL_EPSILON * fabs(poly);
+	result->err = 2.0 * (sqrt((long double)N) + 1.0) * GSL_DBL_EPSILON * fabs(poly);
     return GSL_SUCCESS;
   }
 }
@@ -1264,7 +1264,7 @@ hyperg_1F1_a_negint_lag(const int a, const double b, const double x, gsl_sf_resu
       /* B(x,y) was not near 1, so it is safe to use
        * the logarithmic values.
        */
-      const double ln_n = log(n);
+		const double ln_n = log((long double)n);
       const double ln_term_val = lnbeta.val + ln_n;
       const double ln_term_err = lnbeta.err + 2.0 * GSL_DBL_EPSILON * fabs(ln_n);
       int stat_e = gsl_sf_exp_mult_err_e(ln_term_val, ln_term_err,
@@ -1810,11 +1810,11 @@ gsl_sf_hyperg_1F1_int_e(const int a, const int b, const double x, gsl_sf_result 
     /* Standard domain error due to singularity. */
     DOMAIN_ERROR(result);
   }
-  else if(x > 100.0  && GSL_MAX_DBL(1.0,fabs(b-a))*GSL_MAX_DBL(1.0,fabs(1-a)) < 0.5 * x) {
+  else if (x > 100.0  && GSL_MAX_DBL(1.0, fabs((long double)(b - a)))*GSL_MAX_DBL(1.0, fabs((long double)(1 - a))) < 0.5 * x) {
     /* x -> +Inf asymptotic */
     return hyperg_1F1_asymp_posx(a, b, x, result);
   }
-  else if(x < -100.0 && GSL_MAX_DBL(1.0,fabs(a))*GSL_MAX_DBL(1.0,fabs(1+a-b)) < 0.5 * fabs(x)) {
+  else if (x < -100.0 && GSL_MAX_DBL(1.0, fabs((long double)a))*GSL_MAX_DBL(1.0, fabs((long double)(1 + a - b))) < 0.5 * fabs(x)) {
     /* x -> -Inf asymptotic */
     return hyperg_1F1_asymp_negx(a, b, x, result);
   }

@@ -21,13 +21,13 @@
    See http://www.nist.gov/itl/div898/strd/index.html for more
    information. */
 
-#include <config.h>
+#include <config.h.in>
 #include <stdlib.h>
 #include <math.h>
 
-#include <gsl/gsl_test.h>
+#include <gsl/test/gsl_test.h>
 #include <gsl/gsl_statistics.h>
-#include <gsl/gsl_ieee_utils.h>
+#include <gsl/ieee-utils/gsl_ieee_utils.h>
 
 int
 test_nist (void)

@@ -18,6 +18,8 @@
  */
 
 /* data for a Chebyshev series over a given interval */
+#ifndef __GSL_CHEB_SERIES_STRUCT__
+#define __GSL_CHEB_SERIES_STRUCT__
 
 struct cheb_series_struct {
   double * c;   /* coefficients                */
@@ -28,4 +30,4 @@ struct cheb_series_struct {
 };
 typedef struct cheb_series_struct cheb_series;
 
-
+#endif

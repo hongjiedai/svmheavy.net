@@ -46,16 +46,16 @@
  * chetd2.f for details.
  *
  * See Golub & Van Loan, "Matrix Computations" (3rd ed), Section 8.3 */
-
-#include <config.h>
+#include "stdafx.h"
+#include <config.h.in>
 #include <stdlib.h>
 #include <gsl/gsl_math.h>
-#include <gsl/gsl_vector.h>
-#include <gsl/gsl_matrix.h>
-#include <gsl/gsl_blas.h>
-#include <gsl/gsl_complex_math.h>
+#include <gsl/vector/gsl_vector.h>
+#include <gsl/matrix/gsl_matrix.h>
+#include <gsl/blas/gsl_blas.h>
+#include <gsl/complex/gsl_complex_math.h>
 
-#include <gsl/gsl_linalg.h>
+#include <gsl/linalg/gsl_linalg.h>
 
 int 
 gsl_linalg_hermtd_decomp (gsl_matrix_complex * A, gsl_vector_complex * tau)  

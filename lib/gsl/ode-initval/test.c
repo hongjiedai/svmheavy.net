@@ -20,17 +20,17 @@
 /* Some functions and tests based on test.c by G. Jungman.
 */
 
-#include <config.h>
+#include <config.h.in>
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
-#include <gsl/gsl_test.h>
-#include <gsl/gsl_errno.h>
+#include <gsl/test/gsl_test.h>
+#include <gsl/err/gsl_errno.h>
 #include <gsl/gsl_math.h>
-#include <gsl/gsl_matrix.h>
-#include <gsl/gsl_linalg.h>
-#include <gsl/gsl_ieee_utils.h>
+#include <gsl/matrix/gsl_matrix.h>
+#include <gsl/linalg/gsl_linalg.h>
+#include <gsl/ieee-utils/gsl_ieee_utils.h>
 #include <gsl/gsl_odeiv.h>
 #include "odeiv_util.h"
 

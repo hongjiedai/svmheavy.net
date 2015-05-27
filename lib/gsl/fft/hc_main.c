@@ -17,12 +17,12 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-#include <config.h>
+#include <config.h.in>
 #include <stdlib.h>
 #include <math.h>
 
-#include <gsl/gsl_errno.h>
-#include <gsl/gsl_complex.h>
+#include <gsl/err/gsl_errno.h>
+#include <gsl/complex/gsl_complex.h>
 #include <gsl/gsl_fft_halfcomplex.h>
 
 #include "hc_pass.h"

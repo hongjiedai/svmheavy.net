@@ -136,7 +136,7 @@ C
 
   **/
 
-#include <config.h>
+#include <config.h.in>
 #include <stdlib.h>
 #include <gsl/gsl_rng.h>
 

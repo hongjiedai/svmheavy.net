@@ -16,7 +16,8 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
-
+#include "stdafx.h"
+#include <gsl/poly/gsl_poly.h>
 static void set_companion_matrix (const double *a, size_t n, double *m);
 
 static void

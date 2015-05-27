@@ -20,7 +20,7 @@
 #ifndef __GSL_HEAPSORT_H__
 #define __GSL_HEAPSORT_H__
 
-#include <gsl/gsl_permutation.h>
+#include <gsl/permutation/gsl_permutation.h>
 
 #undef __BEGIN_DECLS
 #undef __END_DECLS

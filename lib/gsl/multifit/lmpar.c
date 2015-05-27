@@ -17,7 +17,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-#include <gsl/gsl_permute_vector_double.h>
+#include <gsl/permutation/gsl_permute_vector_double.h>
 
 #include "qrsolv.c"
 

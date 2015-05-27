@@ -16,14 +16,14 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
-
-#include <config.h>
+#include "stdafx.h"
+#include <config.h.in>
 #include <stddef.h>
 #include <stdlib.h>
 #include <stdio.h>
 
-#include <gsl/gsl_errno.h>
-#include <gsl/gsl_message.h>
+#include <gsl/err/gsl_errno.h>
+#include <gsl/err/gsl_message.h>
 
 unsigned int gsl_message_mask = GSL_MESSAGE_MASK;
 

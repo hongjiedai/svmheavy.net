@@ -19,9 +19,9 @@
 
 /* Jan/2001 Modified by Brian Gough. Minor changes for GSL */
 
-#include <config.h>
+#include <config.h.in>
 #include <errno.h>
-#include <gsl/gsl_errno.h>
+#include <gsl/err/gsl_errno.h>
 #include <gsl/gsl_ntuple.h>
 
 /* 

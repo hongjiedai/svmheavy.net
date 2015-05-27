@@ -1,9 +1,9 @@
-#include <config.h>
+#include <config.h.in>
 #include <math.h>
 #include <stdlib.h>
 #include <gsl/gsl_math.h>
-#include <gsl/gsl_complex.h>
-#include <gsl/gsl_errno.h>
+#include <gsl/complex/gsl_complex.h>
+#include <gsl/err/gsl_errno.h>
 
 #include <gsl/gsl_dft_complex.h>
 #include <gsl/gsl_dft_complex_float.h>

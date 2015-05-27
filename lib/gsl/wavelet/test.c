@@ -1,11 +1,11 @@
-#include <config.h>
+#include <config.h.in>
 #include <stdio.h>
 #include <math.h>
 
-#include <gsl/gsl_errno.h>
-#include <gsl/gsl_vector.h>
-#include <gsl/gsl_blas.h>
-#include <gsl/gsl_test.h>
+#include <gsl/err/gsl_errno.h>
+#include <gsl/vector/gsl_vector.h>
+#include <gsl/blas/gsl_blas.h>
+#include <gsl/test/gsl_test.h>
 
 #include <gsl/gsl_wavelet.h>
 #include <gsl/gsl_wavelet2d.h>

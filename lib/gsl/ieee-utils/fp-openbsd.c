@@ -18,8 +18,8 @@
  */
 
 #include <ieeefp.h>
-#include <gsl/gsl_ieee_utils.h>
-#include <gsl/gsl_errno.h>
+#include <gsl/ieee-utils/gsl_ieee_utils.h>
+#include <gsl/err/gsl_errno.h>
 
 /* This is a copy of fp-netbsd.c, modified for openbsd by Toby White
    --- Brian Gough */

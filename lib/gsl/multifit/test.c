@@ -2,15 +2,15 @@
    See http://www.nist.gov/itl/div898/strd/index.html for more
    information. */
 
-#include <config.h>
+#include <config.h.in>
 #include <stdlib.h>
 #include <gsl/gsl_math.h>
-#include <gsl/gsl_test.h>
+#include <gsl/test/gsl_test.h>
 #include <gsl/gsl_multifit.h>
 #include <gsl/gsl_multifit_nlin.h>
-#include <gsl/gsl_blas.h>
+#include <gsl/blas/gsl_blas.h>
 
-#include <gsl/gsl_ieee_utils.h>
+#include <gsl/ieee-utils/gsl_ieee_utils.h>
 
 #include "test_longley.c"
 #include "test_filip.c"

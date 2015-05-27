@@ -16,8 +16,8 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
-
-int
+#include "stdafx.h"
+/*int
 FUNCTION (gsl_vector, fread) (FILE * stream, TYPE (gsl_vector) * v)
 {
   int status = FUNCTION (gsl_block, raw_fread) (stream,
@@ -61,3 +61,4 @@ FUNCTION (gsl_vector, fscanf) (FILE * stream, TYPE (gsl_vector) * v)
 }
 #endif
 
+*/

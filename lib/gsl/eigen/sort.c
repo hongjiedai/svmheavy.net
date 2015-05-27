@@ -18,13 +18,13 @@
  */
 
 /* Author:  G. Jungman, Modified: B. Gough. */
-
-#include <config.h>
+#include "stdafx.h"
+#include <config.h.in>
 #include <stdlib.h>
 #include <gsl/gsl_math.h>
-#include <gsl/gsl_eigen.h>
-#include <gsl/gsl_complex.h>
-#include <gsl/gsl_complex_math.h>
+#include <gsl/eigen/gsl_eigen.h>
+#include <gsl/complex/gsl_complex.h>
+#include <gsl/complex/gsl_complex_math.h>
 
 /* The eigen_sort below is not very good, but it is simple and
  * self-contained. We can always implement an improved sort later.  */

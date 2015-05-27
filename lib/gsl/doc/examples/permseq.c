@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <gsl/gsl_permutation.h>
+#include <gsl/permutation/gsl_permutation.h>
 
 int
 main (void) 

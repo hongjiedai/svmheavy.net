@@ -1,7 +1,8 @@
 /**********************************************************************/
 /* The functions below are obsolete                                   */
 /**********************************************************************/
-
+#include "stdafx.h"
+/*
 int
 FUNCTION (gsl_matrix, get_row) (TYPE (gsl_vector) * v,
                                  const TYPE (gsl_matrix) * m,
@@ -226,3 +227,4 @@ FUNCTION (gsl_vector, alloc_col_from_matrix) (TYPE(gsl_matrix) * m,
   return v;
 }
 
+*/

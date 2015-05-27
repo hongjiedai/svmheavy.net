@@ -18,15 +18,15 @@
  */
 
 /* Author:  G. Jungman */
-
-#include <config.h>
+#include "stdafx.h"
+#include <config.h.in>
 #include <gsl/gsl_math.h>
-#include <gsl/gsl_errno.h>
-#include <gsl/gsl_sf_pow_int.h>
+#include <gsl/err/gsl_errno.h>
+#include <gsl/specfunc/gsl_sf_pow_int.h>
 #include "bessel.h"
 #include "bessel_amp_phase.h"
 #include "bessel_olver.h"
-#include <gsl/gsl_sf_bessel.h>
+#include <gsl/specfunc/gsl_sf_bessel.h>
 
 
 

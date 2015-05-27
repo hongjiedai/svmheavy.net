@@ -28,12 +28,12 @@
 /* Author: MJB */
 /* Modified by Brian Gough 12/2000 */
 
-#include <config.h>
+#include <config.h.in>
 #include <math.h>
 #include <stdlib.h>
 
 #include <gsl/gsl_math.h>
-#include <gsl/gsl_errno.h>
+#include <gsl/err/gsl_errno.h>
 #include <gsl/gsl_rng.h>
 #include <gsl/gsl_monte.h>
 #include <gsl/gsl_monte_miser.h>

@@ -16,8 +16,8 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
-
-#include <config.h>
+#include "stdafx.h"
+#include <config.h.in>
 
 #define GSL_MAX(a,b) ((a) > (b) ? (a) : (b))
 #define GSL_MIN(a,b) ((a) < (b) ? (a) : (b))

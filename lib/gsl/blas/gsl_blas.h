@@ -23,10 +23,10 @@
 #ifndef __GSL_BLAS_H__
 #define __GSL_BLAS_H__
 
-#include <gsl/gsl_vector.h>
+#include <gsl/vector/gsl_vector.h>
 #include <gsl/matrix/gsl_matrix.h>
 
-#include <gsl/gsl_blas_types.h>
+#include <gsl/blas/gsl_blas_types.h>
 
 
 #undef __BEGIN_DECLS

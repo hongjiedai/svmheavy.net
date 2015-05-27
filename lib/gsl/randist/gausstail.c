@@ -17,12 +17,12 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-#include <config.h>
+#include <config.h.in>
 #include <math.h>
 #include <gsl/gsl_math.h>
 #include <gsl/gsl_rng.h>
 #include <gsl/gsl_randist.h>
-#include <gsl/gsl_sf_erf.h>
+#include <gsl/specfunc/gsl_sf_erf.h>
 
 double
 gsl_ran_gaussian_tail (const gsl_rng * r, const double a, const double sigma)

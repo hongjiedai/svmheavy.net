@@ -2,13 +2,13 @@
    See http://www.nist.gov/itl/div898/strd/index.html for more
    information. */
 
-#include <config.h>
+#include <config.h.in>
 #include <stdlib.h>
 #include <gsl/gsl_math.h>
-#include <gsl/gsl_test.h>
+#include <gsl/test/gsl_test.h>
 #include <gsl/gsl_fit.h>
 
-#include <gsl/gsl_ieee_utils.h>
+#include <gsl/ieee-utils/gsl_ieee_utils.h>
 
 size_t norris_n = 36;
 

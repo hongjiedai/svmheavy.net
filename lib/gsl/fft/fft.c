@@ -1,11 +1,11 @@
-#include <config.h>
+#include <config.h.in>
 #include <stddef.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
 
-#include <gsl/gsl_errno.h>
-#include <gsl/gsl_complex.h>
+#include <gsl/err/gsl_errno.h>
+#include <gsl/complex/gsl_complex.h>
 
 #include <gsl/gsl_fft_complex.h>
 #include <gsl/gsl_fft_complex_float.h>

@@ -17,9 +17,9 @@
  * for more details.
  */
 
-#include <config.h>
-#include <gsl/gsl_errno.h>
-#include <gsl/gsl_vector.h>
+#include <config.h.in>
+#include <gsl/err/gsl_errno.h>
+#include <gsl/vector/gsl_vector.h>
 #include <gsl/gsl_sort.h>
 #include <gsl/gsl_sort_vector.h>
 

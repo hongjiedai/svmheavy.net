@@ -21,9 +21,9 @@
  * Ted.Belding@umich.edu
  *
  */
-
-#include <config.h>
-#include <gsl/gsl_sys.h>
+#include "stdafx.h"
+//#include <config.h.in>
+#include <gsl/sys/gsl_sys.h>
 #include <math.h>
 
 int

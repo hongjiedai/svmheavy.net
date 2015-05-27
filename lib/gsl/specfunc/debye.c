@@ -19,11 +19,11 @@
 
 /* Author:  G. Jungman */
 /* augmented to n=5 and 6 2005-11-08 by R. J. Mathar, http://www.strw.leidenuniv.nl/~mathar */
-
-#include <config.h>
+#include "stdafx.h"
+#include <config.h.in>
 #include <gsl/gsl_math.h>
-#include <gsl/gsl_errno.h>
-#include <gsl/gsl_sf_debye.h>
+#include <gsl/err/gsl_errno.h>
+#include <gsl/specfunc/gsl_sf_debye.h>
 
 #include "error.h"
 #include "check.h"

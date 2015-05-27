@@ -21,10 +21,10 @@
  * Use in-place algorithms, no need for workspace
  * Use conventions for canonical form given in Knuth (opposite of Sedgewick)
  */
-
-#include <config.h>
-#include <gsl/gsl_errno.h>
-#include <gsl/gsl_permutation.h>
+#include "stdafx.h"
+#include <config.h.in>
+#include <gsl/err/gsl_errno.h>
+#include <gsl/permutation/gsl_permutation.h>
 
 int
 gsl_permutation_linear_to_canonical (gsl_permutation * q,

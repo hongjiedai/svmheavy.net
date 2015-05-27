@@ -16,7 +16,8 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
-
+#include "stdafx.h"
+/*
 void FUNCTION (test, func) (size_t stride, size_t N);
 void FUNCTION (test, ops) (size_t stride1, size_t stride2, size_t N);
 void FUNCTION (test, file) (size_t stride, size_t N);
@@ -65,7 +66,7 @@ FUNCTION (test, func) (size_t stride, size_t N)
       }
 
       FUNCTION (gsl_vector, free) (v);      /* free whatever is in v */
-    }
+/*    }
 
   if (stride == 1) 
     {
@@ -76,7 +77,7 @@ FUNCTION (test, func) (size_t stride, size_t N)
       TEST(v->stride != 1, "_alloc stride");
 
       FUNCTION (gsl_vector, free) (v);      /* free whatever is in v */
-    }
+/*    }
 
   if (stride == 1)
     {
@@ -557,7 +558,7 @@ FUNCTION (test, func) (size_t stride, size_t N)
 
 
   FUNCTION (gsl_vector, free) (v0);      /* free whatever is in v */
-}
+/*}
 
 void
 FUNCTION (test, ops) (size_t stride1, size_t stride2, size_t N)
@@ -714,12 +715,12 @@ FUNCTION (test, file) (size_t stride, size_t N)
   }
 
   FUNCTION (gsl_vector, free) (v);      /* free whatever is in v */
-  FUNCTION (gsl_vector, free) (w);      /* free whatever is in w */
-}
+/*  FUNCTION (gsl_vector, free) (w);      /* free whatever is in w */
+/*}
 
 #if USES_LONGDOUBLE && ! HAVE_PRINTF_LONGDOUBLE
 /* skip this test */
-#else
+/*#else
 void
 FUNCTION (test, text) (size_t stride, size_t N)
 {
@@ -800,9 +801,10 @@ FUNCTION (test, trap) (size_t stride, size_t N)
   TEST (x != 0, "_get returns zero for index at upper bound");
 
   FUNCTION (gsl_vector, free) (v);      /* free whatever is in v */
-}
+/*}
 
 
 
 
 
+*/

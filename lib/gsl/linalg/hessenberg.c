@@ -16,11 +16,11 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
-
-#include <config.h>
-#include <gsl/gsl_linalg.h>
-#include <gsl/gsl_matrix.h>
-#include <gsl/gsl_vector.h>
+#include "stdafx.h"
+#include <config.h.in>
+#include <gsl/linalg/gsl_linalg.h>
+#include <gsl/matrix/gsl_matrix.h>
+#include <gsl/vector/gsl_vector.h>
 
 /*
 gsl_linalg_hessenberg()

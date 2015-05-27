@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <gsl/gsl_ieee_utils.h>
+#include <gsl/ieee-utils/gsl_ieee_utils.h>
 
 int
 main (void) 

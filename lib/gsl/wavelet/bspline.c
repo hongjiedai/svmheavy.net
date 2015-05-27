@@ -30,8 +30,8 @@
  * the term 336z^-3 should read 363z^-3.
  */
 
-#include <config.h>
-#include <gsl/gsl_errno.h>
+#include <config.h.in>
+#include <gsl/err/gsl_errno.h>
 #include <gsl/gsl_math.h>
 #include <gsl/gsl_wavelet.h>
 

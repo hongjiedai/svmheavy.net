@@ -20,14 +20,13 @@
 
 /* GSL implementation of BLAS operations for vectors and dense
  * matrices.  Note that GSL native storage is row-major.  */
-
-#include <config.h>
+#include "stdafx.h"
+#include <config.h.in>
 #include <gsl/gsl_math.h>
-#include <gsl/gsl_errno.h>
-#include <gsl/gsl_cblas.h>
-#include <gsl/gsl_cblas.h>
-#include <gsl/gsl_blas_types.h>
-#include <gsl/gsl_blas.h>
+#include <gsl/err/gsl_errno.h>
+#include <gsl/cblas/gsl_cblas.h>
+#include <gsl/blas/gsl_blas_types.h>
+#include <gsl/blas/gsl_blas.h>
 
 /* ========================================================================
  * Level 1

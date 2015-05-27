@@ -17,14 +17,14 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-#include <config.h>
+#include <config.h.in>
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
-#include <gsl/gsl_permutation.h>
-#include <gsl/gsl_permute_double.h>
-#include <gsl/gsl_test.h>
-#include <gsl/gsl_ieee_utils.h>
+#include <gsl/permutation/gsl_permutation.h>
+#include <gsl/permutation/gsl_permute_double.h>
+#include <gsl/test/gsl_test.h>
+#include <gsl/ieee-utils/gsl_ieee_utils.h>
 
 unsigned int p5[120][5] = {
   {0, 1, 2, 3, 4}, {0, 1, 2, 4, 3}, {0, 1, 3, 2, 4}, {0, 1, 3, 4, 2},

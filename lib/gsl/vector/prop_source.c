@@ -16,7 +16,8 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
-
+#include "stdafx.h"
+/*
 int
 FUNCTION (gsl_vector, isnull) (const TYPE (gsl_vector) * v)
 {
@@ -89,3 +90,4 @@ FUNCTION (gsl_vector, isneg) (const TYPE (gsl_vector) * v)
   return 1;
 }
 
+*/

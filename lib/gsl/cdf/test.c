@@ -17,15 +17,15 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307, USA.
  */
 
-#include <config.h>
+#include <config.h.in>
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 #include <gsl/gsl_math.h>
 #include <gsl/gsl_randist.h>
 #include <gsl/gsl_cdf.h>
-#include <gsl/gsl_test.h>
-#include <gsl/gsl_ieee_utils.h>
+#include <gsl/test/gsl_test.h>
+#include <gsl/ieee-utils/gsl_ieee_utils.h>
 
 #define TEST(func, args, value, tol) { double res = func args ; gsl_test_rel (res, value, tol, #func #args); } ;
 

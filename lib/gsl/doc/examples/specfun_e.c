@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include <gsl/gsl_errno.h>
-#include <gsl/gsl_sf_bessel.h>
+#include <gsl/err/gsl_errno.h>
+#include <gsl/specfunc/gsl_sf_bessel.h>
 
 int
 main (void)

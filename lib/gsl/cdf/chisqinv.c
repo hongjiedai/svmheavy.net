@@ -17,9 +17,9 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307, USA.
  */
 
-#include <config.h>
+#include <config.h.in>
 #include <gsl/gsl_cdf.h>
-#include <gsl/gsl_sf_gamma.h>
+#include <gsl/specfunc/gsl_sf_gamma.h>
 
 double
 gsl_cdf_chisq_Pinv (const double P, const double nu)

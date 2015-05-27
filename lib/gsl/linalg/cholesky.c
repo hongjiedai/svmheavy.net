@@ -30,15 +30,15 @@
  *   L' := the transposed form of L.
  *
  */
-
-#include <config.h>
+#include "stdafx.h"
+#include <config.h.in>
 
 #include <gsl/gsl_math.h>
-#include <gsl/gsl_errno.h>
-#include <gsl/gsl_vector.h>
-#include <gsl/gsl_matrix.h>
-#include <gsl/gsl_blas.h>
-#include <gsl/gsl_linalg.h>
+#include <gsl/err/gsl_errno.h>
+#include <gsl/vector/gsl_vector.h>
+#include <gsl/matrix/gsl_matrix.h>
+#include <gsl/blas/gsl_blas.h>
+#include <gsl/linalg/gsl_linalg.h>
 
 static inline 
 double

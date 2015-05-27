@@ -27,8 +27,8 @@
  * http://www.cwp.mines.edu/wavelets/.
  */
 
-#include <config.h>
-#include <gsl/gsl_errno.h>
+#include <config.h.in>
+#include <gsl/err/gsl_errno.h>
 #include <gsl/gsl_wavelet.h>
 
 static const double h_4[4] = { 0.48296291314453414337487159986,

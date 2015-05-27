@@ -16,7 +16,8 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
-
+#include "stdafx.h"
+/*
 TYPE (gsl_vector) *
 FUNCTION (gsl_vector, alloc) (const size_t n)
 {
@@ -67,7 +68,7 @@ FUNCTION (gsl_vector, calloc) (const size_t n)
     return 0;
 
   /* initialize vector to zero */
-
+/*
   for (i = 0; i < MULTIPLICITY * n; i++)
     {
       v->data[i] = 0;
@@ -226,3 +227,4 @@ FUNCTION (gsl_vector, set_basis) (TYPE (gsl_vector) * v, size_t i)
 
   return GSL_SUCCESS;
 }
+*/

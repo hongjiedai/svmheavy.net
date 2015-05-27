@@ -18,11 +18,11 @@
  */
 
 /* complex_solve_quadratic.c - finds complex roots of a x^2 + b x + c = 0 */
-
-#include <config.h>
+#include "stdafx.h"
+#include <config.h.in>
 #include <math.h>
-#include <gsl/gsl_complex.h>
-#include <gsl/gsl_poly.h>
+#include <gsl/complex/gsl_complex.h>
+#include <gsl/poly/gsl_poly.h>
 
 int
 gsl_poly_complex_solve_quadratic (double a, double b, double c,

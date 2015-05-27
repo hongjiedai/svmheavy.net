@@ -18,16 +18,16 @@
  */
 
 /* Author:  G. Jungman */
-
-#include <config.h>
+#include "stdafx.h"
+#include <config.h.in>
 #include <gsl/gsl_math.h>
-#include <gsl/gsl_errno.h>
-#include <gsl/gsl_sf_bessel.h>
-#include <gsl/gsl_sf_exp.h>
-#include <gsl/gsl_sf_gamma.h>
-#include <gsl/gsl_sf_log.h>
-#include <gsl/gsl_sf_pow_int.h>
-#include <gsl/gsl_sf_legendre.h>
+#include <gsl/err/gsl_errno.h>
+#include <gsl/specfunc/gsl_sf_bessel.h>
+#include <gsl/specfunc/gsl_sf_exp.h>
+#include <gsl/specfunc/gsl_sf_gamma.h>
+#include <gsl/specfunc/gsl_sf_log.h>
+#include <gsl/specfunc/gsl_sf_pow_int.h>
+#include <gsl/specfunc/gsl_sf_legendre.h>
 
 #include "error.h"
 
@@ -541,7 +541,7 @@ gsl_sf_legendre_sphPlm_e(const int l, int m, const double x, gsl_sf_result * res
     gsl_sf_log_1plusx_e(-x*x, &lncirc);
     gsl_sf_lnpoch_e(m, 0.5, &lnpoch);  /* Gamma(m+1/2)/Gamma(m) */
     lnpre_val = -0.25*M_LNPI + 0.5 * (lnpoch.val + m*lncirc.val);
-    lnpre_err = 0.25*M_LNPI*GSL_DBL_EPSILON + 0.5 * (lnpoch.err + fabs(m)*lncirc.err);
+	lnpre_err = 0.25*M_LNPI*GSL_DBL_EPSILON + 0.5 * (lnpoch.err + fabs((long double)m)*lncirc.err);
     /* Compute exp(ln_pre) with error term, avoiding call to gsl_sf_exp_err BJG */
     ex_pre.val = exp(lnpre_val);
     ex_pre.err = 2.0*(sinh(lnpre_err) + GSL_DBL_EPSILON)*ex_pre.val;
@@ -579,7 +579,7 @@ gsl_sf_legendre_sphPlm_e(const int l, int m, const double x, gsl_sf_result * res
         y_mm   = y_mmp1;
         y_mmp1 = y_ell;
 
-        y_ell_err = 0.5*(fabs(x*factor1)*y_mmp1_err + fabs((ell+m-1.0)*factor2)*y_mm_err) / fabs(ell-m);
+		y_ell_err = 0.5*(fabs(x*factor1)*y_mmp1_err + fabs((long double)(ell + m - 1.0)*factor2)*y_mm_err) / fabs((long double)(ell - m));
         y_mm_err = y_mmp1_err;
         y_mmp1_err = y_ell_err;
       }

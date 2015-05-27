@@ -1,3 +1,4 @@
+#include <stdafx.h>
 #include <math.h>
 
 static double xhypot (const double x, const double y);

@@ -2,8 +2,8 @@
 #include <stdio.h>
 #include <gsl/gsl_rng.h>
 #include <gsl/gsl_randist.h>
-#include <gsl/gsl_vector.h>
-#include <gsl/gsl_blas.h>
+#include <gsl/vector/gsl_vector.h>
+#include <gsl/blas/gsl_blas.h>
 #include <gsl/gsl_multifit_nlin.h>
 
 #include "expfit.c"

@@ -23,9 +23,10 @@
  * This is applicable for x < 2 and |nu|<=1/2.
  * These functions assume x > 0.
  */
-#include <config.h>
+#include "stdafx.h"
+#include <config.h.in>
 #include <gsl/gsl_math.h>
-#include <gsl/gsl_errno.h>
+#include <gsl/err/gsl_errno.h>
 #include <gsl/gsl_mode.h>
 #include "bessel_temme.h"
 

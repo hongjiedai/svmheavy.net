@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <gsl/gsl_math.h>
-#include <gsl/gsl_eigen.h>
+#include <gsl/eigen/gsl_eigen.h>
 
 int
 main (void)

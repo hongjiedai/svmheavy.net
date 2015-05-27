@@ -1,4 +1,8 @@
-
+#include "stdafx.h"
+#include "gsl/specfunc/gsl_sf_result.h"
+#include "gsl/specfunc/chebyshev.h"
+#include <gsl/gsl_math.h>
+#include <gsl/err/gsl_errno.h>
 static inline int
 cheb_eval_e(const cheb_series * cs,
             const double x,
