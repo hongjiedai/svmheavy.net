@@ -20,8 +20,8 @@
 #ifndef __GSL_EIGEN_H__
 #define __GSL_EIGEN_H__
 
-#include <gsl/gsl_vector.h>
-#include <gsl/gsl_matrix.h>
+#include <gsl/vector/gsl_vector.h>
+#include <gsl/matrix/gsl_matrix.h>
 
 #undef __BEGIN_DECLS
 #undef __END_DECLS

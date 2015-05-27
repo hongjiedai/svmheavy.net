@@ -20,8 +20,8 @@
 #ifndef __GSL_SCHUR_H__
 #define __GSL_SCHUR_H__
 
-#include <gsl/gsl_matrix.h>
-#include <gsl/gsl_complex.h>
+#include <gsl/matrix/gsl_matrix.h>
+#include <gsl/complex/gsl_complex.h>
 
 /*
  * Prototypes

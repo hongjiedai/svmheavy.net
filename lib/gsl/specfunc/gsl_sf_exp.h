@@ -22,7 +22,7 @@
 #ifndef __GSL_SF_EXP_H__
 #define __GSL_SF_EXP_H__
 
-#include <gsl/gsl_sf_result.h>
+#include <gsl/specfunc/gsl_sf_result.h>
 #include <gsl/gsl_precision.h>
 
 #undef __BEGIN_DECLS

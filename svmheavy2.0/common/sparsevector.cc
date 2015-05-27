@@ -1,4 +1,4 @@
-
+#include "stdafx.h"
 /*
  *  SVMheavy - Another SVM Library
  *  Copyright (C) 2004  Alistair Shilton
@@ -386,8 +386,11 @@ fVECTOR &convert_standard_format(char *input, fVECTOR &result)
 
     if ( d > 0 )
     {
-        long marker[d];
-        L_DOUBLE values[d];
+		// TODO delete marker and value?
+		// long marker[d];
+		// L_DOUBLE values[d];
+        long *marker = new long[d];
+        L_DOUBLE *values = new L_DOUBLE[d];
         long mtemp;
         L_DOUBLE vtemp;
 

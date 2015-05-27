@@ -68,13 +68,10 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies />
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <Reference Include="gsl.net">
-      <HintPath>Release\gsl.net.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -83,6 +80,17 @@
     <ClInclude Include="resource.h" />
     <ClInclude Include="Stdafx.h" />
     <ClInclude Include="svmheavy.net.h" />
+    <ClInclude Include="svmheavy2.0\common\c_double.h" />
+    <ClInclude Include="svmheavy2.0\common\factor.h" />
+    <ClInclude Include="svmheavy2.0\common\friends.h" />
+    <ClInclude Include="svmheavy2.0\common\levicivita.h" />
+    <ClInclude Include="svmheavy2.0\common\matrix.h" />
+    <ClInclude Include="svmheavy2.0\common\outfilt.h" />
+    <ClInclude Include="svmheavy2.0\common\rime.h" />
+    <ClInclude Include="svmheavy2.0\common\search.h" />
+    <ClInclude Include="svmheavy2.0\common\sparsevector.h" />
+    <ClInclude Include="svmheavy2.0\common\svdefs.h" />
+    <ClInclude Include="svmheavy2.0\common\vector.h" />
     <ClInclude Include="svmheavy2.0\kcache.h" />
     <ClInclude Include="svmheavy2.0\kernel.h" />
     <ClInclude Include="svmheavy2.0\nullstream.h" />
@@ -101,6 +109,18 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="svmheavy.net.cpp" />
+    <ClCompile Include="svmheavy2.0\common\c_double.cc" />
+    <ClCompile Include="svmheavy2.0\common\factor.cc" />
+    <ClCompile Include="svmheavy2.0\common\levicivita.cc" />
+    <ClCompile Include="svmheavy2.0\common\matrix.cc">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Default</CompileAs>
+    </ClCompile>
+    <ClCompile Include="svmheavy2.0\common\outfilt.cc" />
+    <ClCompile Include="svmheavy2.0\common\search.cc" />
+    <ClCompile Include="svmheavy2.0\common\sparsevector.cc">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Default</CompileAs>
+    </ClCompile>
+    <ClCompile Include="svmheavy2.0\common\vector.cc" />
     <ClCompile Include="svmheavy2.0\kcache.cc" />
     <ClCompile Include="svmheavy2.0\kernel.cc" />
     <ClCompile Include="svmheavy2.0\svdata.cc" />

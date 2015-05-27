@@ -21,8 +21,8 @@
 #define __GSL_PERMUTE_COMPLEX_FLOAT_H__
 
 #include <stdlib.h>
-#include <gsl/gsl_errno.h>
-#include <gsl/gsl_complex.h>
+#include <gsl/err/gsl_errno.h>
+#include <gsl/complex/gsl_complex.h>
 #include <gsl/gsl_permutation.h>
 
 #undef __BEGIN_DECLS

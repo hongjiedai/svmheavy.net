@@ -23,7 +23,7 @@
 #ifndef __GSL_SF_DEBYE_H__
 #define __GSL_SF_DEBYE_H__
 
-#include <gsl/gsl_sf_result.h>
+#include <gsl/specfunc/gsl_sf_result.h>
 
 #undef __BEGIN_DECLS
 #undef __END_DECLS

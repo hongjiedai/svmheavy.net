@@ -21,7 +21,7 @@
 #define __GSL_PERMUTE_UCHAR_H__
 
 #include <stdlib.h>
-#include <gsl/gsl_errno.h>
+#include <gsl/err/gsl_errno.h>
 #include <gsl/gsl_permutation.h>
 
 #undef __BEGIN_DECLS

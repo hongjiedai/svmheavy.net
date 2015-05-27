@@ -22,9 +22,9 @@
 
 #include <stdlib.h>
 #include <gsl/gsl_types.h>
-#include <gsl/gsl_errno.h>
-#include <gsl/gsl_check_range.h>
-#include <gsl/gsl_block_double.h>
+#include <gsl/err/gsl_errno.h>
+#include <gsl/block/gsl_check_range.h>
+#include <gsl/block/gsl_block_double.h>
 
 #undef __BEGIN_DECLS
 #undef __END_DECLS

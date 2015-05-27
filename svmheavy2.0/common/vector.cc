@@ -1,4 +1,4 @@
-
+#include "stdafx.h"
 /*
  *  SVMheavy - Another SVM Library
  *  Copyright (C) 2004  Alistair Shilton
@@ -8682,7 +8682,7 @@ void f_fVECTOR::remove(long which)
 {
     FN_ENTRY_POINT
 
-    REPDEL(((fVECTOR *) (void_base[which-1]).void_point));
+    REPDEL(((void_base[which-1]).void_point));
 
     (void_base[which-1]).void_point = NULL;
 

@@ -326,7 +326,7 @@ computing the SVD of matrices containing Inf and Nan.
 ** Fixed gsl_linalg_balance_columns() to avoid an infinite loop when
 rescaling matrices containing Inf and NaN.
 
-** Fixed header file <gsl/gsl_sf_log.h> to include declarations for 
+** Fixed header file <gsl/specfunc/gsl_sf_log.h> to include declarations for 
 error codes in inline versions of gsl_sf_log functions
 
 ** Fixed header file <gsl/gsl_const.h> to include new MKSA and CGSM

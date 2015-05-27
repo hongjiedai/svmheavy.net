@@ -23,7 +23,7 @@
 #include <gsl/gsl_mode.h>
 #include <gsl/gsl_permutation.h>
 #include <gsl/gsl_vector.h>
-#include <gsl/gsl_matrix.h>
+#include <gsl/matrix/gsl_matrix.h>
 
 #undef __BEGIN_DECLS
 #undef __END_DECLS

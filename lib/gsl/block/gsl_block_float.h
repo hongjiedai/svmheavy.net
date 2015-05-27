@@ -21,7 +21,7 @@
 #define __GSL_BLOCK_FLOAT_H__
 
 #include <stdlib.h>
-#include <gsl/gsl_errno.h>
+#include <gsl/err/gsl_errno.h>
 
 #undef __BEGIN_DECLS
 #undef __END_DECLS

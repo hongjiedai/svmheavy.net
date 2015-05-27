@@ -22,8 +22,8 @@
 #ifndef __GSL_SF_MATHIEU_H__
 #define __GSL_SF_MATHIEU_H__
 
-#include <gsl/gsl_sf_result.h>
-#include <gsl/gsl_eigen.h>
+#include <gsl/specfunc/gsl_sf_result.h>
+#include <gsl/eigen/gsl_eigen.h>
 
 #undef __BEGIN_DECLS
 #undef __END_DECLS

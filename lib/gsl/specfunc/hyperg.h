@@ -25,7 +25,7 @@
 #ifndef _HYPERG_H_
 #define _HYPERG_H_
 
-#include <gsl/gsl_sf_result.h>
+#include <gsl/specfunc/gsl_sf_result.h>
 
 
 /* Direct implementation of 1F1 series.

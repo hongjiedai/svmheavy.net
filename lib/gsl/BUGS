@@ -11,7 +11,7 @@ Date: Thu, 31 Jan 2002 12:30:04 -0000
 gsl_sf_hyperg_2F1_e fails with arguments (1,13,14,0.999227196008978,&r).
 It should return 53.4645... .
 
-#include <gsl/gsl_sf.h>
+#include <gsl/specfunc/gsl_sf.h>
 #include <stdio.h>
 
 int main (void)
@@ -37,7 +37,7 @@ Stegun 15.3.10
 As reported by Lee Warren <warren@atom.chem.utk.edu> another set of
 arguments which fail are:
 
-#include <gsl/gsl_sf.h>
+#include <gsl/specfunc/gsl_sf.h>
 #include <stdio.h>
 
 int main (void)
@@ -83,7 +83,7 @@ slightly different branch conditions for the series and continued
 fraction expansions.  These could be made identical so that P+Q=1 exactly.
 
 #include <stdio.h>
-#include <gsl/gsl_sf_gamma.h>
+#include <gsl/specfunc/gsl_sf_gamma.h>
 
 int
 main (void)

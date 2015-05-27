@@ -54,6 +54,39 @@
     <ClInclude Include="svmheavy2.0\svoptim.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="svmheavy2.0\common\c_double.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="svmheavy2.0\common\factor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="svmheavy2.0\common\friends.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="svmheavy2.0\common\levicivita.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="svmheavy2.0\common\matrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="svmheavy2.0\common\outfilt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="svmheavy2.0\common\rime.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="svmheavy2.0\common\search.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="svmheavy2.0\common\sparsevector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="svmheavy2.0\common\svdefs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="svmheavy2.0\common\vector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="svmheavy.net.cpp">
@@ -90,6 +123,30 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="svmheavy2.0\svoptim.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="svmheavy2.0\common\c_double.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="svmheavy2.0\common\factor.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="svmheavy2.0\common\levicivita.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="svmheavy2.0\common\matrix.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="svmheavy2.0\common\outfilt.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="svmheavy2.0\common\search.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="svmheavy2.0\common\sparsevector.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="svmheavy2.0\common\vector.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

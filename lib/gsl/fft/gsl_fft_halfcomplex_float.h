@@ -23,7 +23,7 @@
 #include <stddef.h>
 
 #include <gsl/gsl_math.h>
-#include <gsl/gsl_complex.h>
+#include <gsl/complex/gsl_complex.h>
 #include <gsl/gsl_fft.h>
 #include <gsl/gsl_fft_real_float.h>
 

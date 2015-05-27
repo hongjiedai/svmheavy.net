@@ -1,0 +1,151 @@
+
+                       ============================
+                       RIMElib 0.5.13.3.2008 (beta)
+                       ============================
+
+
+RuntIme Mathematical Equation Library
+=====================================
+
+Written by: Alistair Shilton
+            Melbourne University
+            apsh@ecr.mu.oz.au
+
+Date of completion: 13/3/2008
+
+Functionality: used for parsing, evaluating, differentiating and
+               integrating arbitrary (text based) equations.
+
+c operation: see erime.h for details.
+c++ operation: see rime.h for details.
+
+
+Requirements
+============
+
+You'll need gsl (the GNU scientific library) installed - RIMElib is
+built on gsl, and will not work without it.  See
+http://www.gnu.org/software/gsl/ for information abount gsl.
+
+
+Making the library
+==================
+
+Simple installation method: make
+                            make clean
+
+This should give you a library file (librime.a).  If that doesn't work,
+try editing the makefile appropriately.  If all else fails, try hand
+compilation:
+
+gcc -W -Wall -c mathtext.c
+gcc -W -Wall -c gvars.c
+gcc -W -Wall -c gmaths.c
+gcc -W -Wall -c erime.c
+gxx -W -Wall -c rime.cc
+
+ar rcvs libmaths.a mathtext.o gvars.o gmaths.o erime.o rime.o
+
+substituting appropriately for your compiler (gcc is the C compiler, gxx
+the C++ compiler, ar the library file maker whatsit).
+
+
+Installing the library
+======================
+
+Once compiled, the following are the relevant files for use:
+
+libmaths.a: the maths library file.
+emaths.h:   header file for the C interface to the library (#include this
+            when using the library in C).
+maths.h:    header file for the C++ interface.
+
+Basically you just need to include the relevant header in your code (as
+always) and link in the libmaths library (and also the gsl library!) when
+you compile / link your code.  See test.cc for an example of how to use
+the library, and above for compilation instructions.
+
+Alternatively, copy these to the appropriate places in your lib/include
+tree so that they are available from all directories.
+
+Enjoy :)
+
+
+Test interface
+==============
+
+After installation, if you want to have a play with the library test
+interface then type make test.  This will produce test.exe, a simple test
+interface that can be used to familiarise yourself with the workings of
+the library.
+
+If make fails, try:
+
+gxx -W -Wall test.cc -L. -lmaths -lgsl -o test.exe
+
+
+To Do List
+==========
+
+- Add "no gsl" switch
+- Port random number generation to gsl.
+- Port random number distrib functions to gsl.
+- Make all functions available in gsl available here.
+- Documentation needs to be expanded / checked etc.
+- Add non integral based derivatives for incomplete gamma functions.
+- Need to make code ISO C90 compliant (at least to some degree, anyway), as
+  at present the code may have difficulties with some compilers.  The type
+  long long is the main issue here.
+- Some of the string handling stuff is hacky and non-standard.
+- when unrolling sum, prod and integ, be very careful with edges.
+  Currently even a slight numerical weirdness will cause errors.
+  Also, you might want to limit the amount of unrolling that can
+  occur.  For example, sum(1,1,10,.1,...) - what if numerical
+  troubles make us end at 10.001?  Also, what about
+  sum(1,1,10,3,...) - this shouldn't cause an error, but at present
+  it will.
+  sum(1,1,10,1,sum(2,2*var(0,1),2*var(0,1)+1,1,...))
+  Furthermore, a sum inside a sum will cause isError during
+  simplification for reasons unknown.  This may carry over to
+  product also.
+- check return code for set_loc_var, restore_loc_var, touch_loc_var
+
+
+temporary hacks: - have removed loop unrolling (for now).
+                 ADENDUM: doing this broke differentiation, so it
+                 has been temprorarily re-added as differentiation
+                 is more important to me now than nested sums.
+                 THIS IS A MAJOR BUG.
+
+
+Known bugs
+==========
+
+- Loop unrolling is broken.  See to do list for details.  Nested summation
+  unrolling is essentially completely broken.
+
+
+
+Copying
+=======
+
+/*
+ *  RIMElib: RuntIme Mathematical Equation Library
+ *  Copyright (C) 2004  Alistair Shilton
+ *
+ *  This program is free software; you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation; either version 2 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with this program; if not, write to the Free Software
+ *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ */
+
+

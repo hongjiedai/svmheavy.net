@@ -24,7 +24,7 @@
 #define __GSL_BLAS_H__
 
 #include <gsl/gsl_vector.h>
-#include <gsl/gsl_matrix.h>
+#include <gsl/matrix/gsl_matrix.h>
 
 #include <gsl/gsl_blas_types.h>
 

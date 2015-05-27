@@ -21,9 +21,9 @@
 #define __GSL_SORT_VECTOR_USHORT_H__
 
 #include <stdlib.h>
-#include <gsl/gsl_errno.h>
+#include <gsl/err/gsl_errno.h>
 #include <gsl/gsl_permutation.h>
-#include <gsl/gsl_vector_ushort.h>
+#include <gsl/vector/gsl_vector_ushort.h>
 
 #undef __BEGIN_DECLS
 #undef __END_DECLS

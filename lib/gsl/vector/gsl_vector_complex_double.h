@@ -22,12 +22,12 @@
 
 #include <stdlib.h>
 #include <gsl/gsl_types.h>
-#include <gsl/gsl_errno.h>
-#include <gsl/gsl_complex.h>
-#include <gsl/gsl_check_range.h>
-#include <gsl/gsl_vector_double.h>
-#include <gsl/gsl_vector_complex.h>
-#include <gsl/gsl_block_complex_double.h>
+#include <gsl/err/gsl_errno.h>
+#include <gsl/complex/gsl_complex.h>
+#include <gsl/block/gsl_check_range.h>
+#include <gsl/vector/gsl_vector_double.h>
+#include <gsl/vector/gsl_vector_complex.h>
+#include <gsl/block/gsl_block_complex_double.h>
 
 #undef __BEGIN_DECLS
 #undef __END_DECLS

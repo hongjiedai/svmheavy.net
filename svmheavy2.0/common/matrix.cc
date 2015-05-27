@@ -1,4 +1,4 @@
-
+#include "stdafx.h"
 /*
  *  SVMheavy - Another SVM Library
  *  Copyright (C) 2004  Alistair Shilton
@@ -11679,7 +11679,7 @@ void fMATRIX::addend(const   double &b)
             }
 
             matrix_struct_lookup.addend();
-            GET_XMATRIX_N(size) = (void *) here;
+			GET_XMATRIX_NS(size) = (void *)here;
                                                                         
             here->diag = b;                                             
                                                                         
@@ -11783,7 +11783,7 @@ void fMATRIX::addend(const   double &b, const fVECTOR &x)
             }                                                           
                                                                         
             matrix_struct_lookup.addend();
-            GET_XMATRIX_N(size) = (void *) here;
+			GET_XMATRIX_NS(size) = (void *)here;
                                                                         
             here->diag = b;                                             
                                                                         
@@ -11833,7 +11833,7 @@ void fMATRIX::addend(const   double &b, const fVECTOR &x)
             }                                                           
                                                                         
             matrix_struct_lookup.addend();
-            GET_XMATRIX_N(size) = (void *) here;
+			GET_XMATRIX_NS(size) = (void *)here;
                                                                         
             here->diag = b;                                             
                                                                         
@@ -11883,7 +11883,7 @@ void fMATRIX::addend(const   double &b, const fVECTOR &x)
             }                                                           
                                                                         
             matrix_struct_lookup.addend();
-            GET_XMATRIX_N(size) = (void *) here;
+			GET_XMATRIX_NS(size) = (void *)here;
                                                                         
             here->diag = b;                                             
                                                                         
@@ -11978,7 +11978,7 @@ void fMATRIX::addend(const   double &b, const fVECTOR &x, const fVECTOR &y)
             }                                                           
                                                                         
             matrix_struct_lookup.addend();
-            GET_XMATRIX_N(size) = (void *) here;
+			GET_XMATRIX_NS(size) = (void *)here;
                                                                         
             here->diag = b;                                             
                                                                         

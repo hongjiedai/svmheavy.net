@@ -20,9 +20,9 @@
 #ifndef __GSL_WAVELET2D_H__
 #define __GSL_WAVELET2D_H__
 #include <stdlib.h>
-#include <gsl/gsl_errno.h>
-#include <gsl/gsl_vector_double.h>
-#include <gsl/gsl_matrix_double.h>
+#include <gsl/err/gsl_errno.h>
+#include <gsl/vector/gsl_vector_double.h>
+#include <gsl/matrix/gsl_matrix_double.h>
 #include <gsl/gsl_wavelet.h>
 
 #undef __BEGIN_DECLS

@@ -923,6 +923,7 @@ class fMATRIX
 //
 
 #define GET_XMATRIX_N(___qwerty_n) ((l_xMatrix *) ((matrix_struct_lookup[(___qwerty_n)-1]).void_point))
+#define GET_XMATRIX_NS(___qwerty_n) ((matrix_struct_lookup[(___qwerty_n)-1]).void_point)
 #define GET_MATRIX_N(___qwerty_n)  ((l_xMatrix *) ((matrix_struct_lookup.get_offset_element((___qwerty_n)-1)).void_point))
 
 

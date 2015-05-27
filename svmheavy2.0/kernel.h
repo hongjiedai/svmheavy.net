@@ -43,7 +43,6 @@
 #include "common/matrix.h"
 #include "common/friends.h"
 
-
 #define LINEAR_KERNEL           "var(5,12)"
 
 

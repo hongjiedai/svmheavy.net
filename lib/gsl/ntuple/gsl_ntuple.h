@@ -25,7 +25,7 @@
 
 #include <stdlib.h>
 #include <stdio.h>
-#include <gsl/gsl_errno.h>
+#include <gsl/err/gsl_errno.h>
 #include <gsl/gsl_histogram.h>
 
 #undef __BEGIN_DECLS
