@@ -1,4 +1,3 @@
-#include "stdafx.h"
 /*
  *  RIMElib: RuntIme Mathematical Equation Library (hacking module)
  *  Copyright (C) 2004  Alistair Shilton
@@ -17,7 +16,8 @@
  *  along with this program; if not, write to the Free Software
  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
-
+#include "stdafx.h"
+/* 先註解起來以便編譯成功
 
 #define INIT_EMATHS
 
@@ -25,7 +25,7 @@
    Usage: recompile static data after adding functions to the library.
    Description: see erime.h entry on the initMaths function.
 */
-
+/*
 #include "erime.h"
 #include <stdio.h>
 
@@ -35,3 +35,4 @@ int main(void)
 
    return 0;
 }
+*/

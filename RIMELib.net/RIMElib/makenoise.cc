@@ -1,4 +1,3 @@
-#include "stdafx.h"
 /*
  *  RIMElib: RuntIme Mathematical Equation Library (example code)
  *  Copyright (C) 2004  Alistair Shilton
@@ -17,7 +16,8 @@
  *  along with this program; if not, write to the Free Software
  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
-
+#include "stdafx.h"
+/* 先註解起來以便編譯成功
 
 //
 // Noise generation example.
@@ -62,3 +62,4 @@ int main()
 
     return 0;
 }
+*/
